@@ -1,0 +1,23 @@
+// .page-header {
+
+// }
+
+.page-header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 16px 0;
+}
+
+.page-header__site-navigation {
+  display: none;
+}
+
+.page-header__user-navigation {
+  margin: 0 24px 0 auto;
+}
+
+.page-header__hamburger-button {
+  width: 32px;
+  height: 32px;
+}

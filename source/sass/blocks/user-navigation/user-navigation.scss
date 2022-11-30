@@ -1,0 +1,24 @@
+.user-navigation__list {
+  display: flex;
+  column-gap: 20px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.user-navigation__item--only-desktop {
+  display: none;
+}
+
+.user-navigation__link {
+  display: block;
+  width: 28px;
+  height: 28px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.user-navigation__link--cart {
+  background-image: url('../../../img/icons/stack.svg#cart_icon');
+}

@@ -1,0 +1,26 @@
+.hamburger-button {
+  position: relative;
+  border: none;
+  background-color: transparent;
+  transition: .3s ease-in;
+
+   &::before,
+   &::after {
+    position: absolute;
+    content: '';
+    height: 2px;
+    background: $base-black;
+   }
+
+   &::before {
+    width: 32px;
+    top: 12px;
+    left: 0;
+   }
+
+   &::after {
+    width: 18px;
+    top: 21px;
+    left: 14px;
+   }
+}
