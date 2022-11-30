@@ -9,7 +9,7 @@
 </head>
 
 <body>
-  <header class="page__header">
+  <header class="page__header header">
     <nav class="site-navigation">
       <ul>
         <li>
@@ -29,7 +29,9 @@
     <nav class="user-navigation">
       <ul>
         <li>
-          <input type="search" name="" id="">
+          <form action="#" method="GET">
+            <input type="search" name="" id="">
+          </form>
         </li>
         <li>
           <a href="#">Личный кабинет</a>
@@ -42,9 +44,10 @@
         </li>
       </ul>
     </nav>
+    <button>Открыть мобильное меню</button>
   </header>
 
-  <main class="page__main">
+  <main class="page__main main">
     <ul class="breadcrumbs">
       <li>
         <a href="#">Главная</a>
@@ -232,10 +235,54 @@
         </div>
       </form>
     </section>
-
   </main>
 
-  <footer class="page__footer"></footer>
+  <footer class="page__footer footer">
+    <div class="footer__top">
+      <section class="subscribe">
+        <h3>Скидка 10% за подписку
+          на наши новости</h3>
+        <form class="subscribe__form" action="#">
+          <input type="email">
+          <button type="submit">
+            <span>Подписаться</span>
+          </button>
+          <span>Нажимая кнопку “Подписаться”, Вы соглашаетесь с
+            <a href="#">политикой конфиденциальности.</a>
+          </span>
+        </form>
+      </section>
+
+      <section class="footer__navigation">
+        <h3 class="visually-hidden">Основные ссылки и разделы сайта</h3>
+        <ul>
+          <li>Каталог</li>
+          <li>О компании</li>
+          <li>Магазины</li>
+          <li>Новости</li>
+        </ul>
+        <ul>
+          <li>Оплата и доставка</li>
+          <li>Условия возврата</li>
+          <li>Бонусная система</li>
+          <li>Подарочный сертификат</li>
+        </ul>
+        <ul>
+          <li>Telegram</li>
+          <li>WhatsApp</li>
+          <li>Youtube</li>
+          <li>VK</li>
+        </ul>
+      </section>
+
+    </div>
+    <div class="footer__bottom">
+      <span>© All rights reserved</span>
+      <a href="#">Публичная оферта</a>
+      <a href="#">Политика конфиденциальности</a>
+      <a href="https://5corners.ru/">Сделано в студии <img src="" alt="логотип компании 5 Углов"> 5 УГЛОВ</a>
+    </div>
+  </footer>
 
   <script src="./js/script.js" defer></script>
 </body>
