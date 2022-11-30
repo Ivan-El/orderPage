@@ -44,7 +44,196 @@
     </nav>
   </header>
 
-  <main class="page__main"></main>
+  <main class="page__main">
+    <ul class="breadcrumbs">
+      <li>
+        <a href="#">Главная</a>
+      </li>
+      <li>
+        <a href="#">Оформление заказа</a>
+      </li>
+    </ul>
+
+    <h1>Оформление заказа</h1>
+    <div>
+      <span>Есть аккаунт?</span>
+      <a href="#">Войти</a>
+    </div>
+
+    <section class="order">
+      <h2 class="order__title">3 товара на сумму 25 000 ₽ </h2>
+
+      <ul class="order__ware-list">
+        <li>
+          <form action="#">
+            <article class="order__ware-card">
+              <a href="#">
+                <img class="ware-card__image" src="./img/wares/woman_jacket_tophills_512_05.png"
+                  alt="куртка черного цвета" width="90" height="111">
+              </a>
+              <h3 class="ware-card__title">
+                <a href="#">Утепленная стеганная куртка женская Top Hills</a>
+              </h3>
+              <dl class="ware-card__characteristic">
+                <dt>Артикул</dt>
+                <dd>512-05</dd>
+                <dt>Сезон</dt>
+                <dd>Осень-зима</dd>
+              </dl>
+              <div class="ware-card__size-selection size-selection">
+                <input class="size-selection__size-radio" type="radio" name="size" id="size_1">
+                <label class="size-selection__size-radio-label" for="size_1">XS</label>
+                <input class="size-selection__size-radio" type="radio" name="size" id="size_2">
+                <label class="size-selection__size-radio-label" for="size_2">S</label>
+                <input class="size-selection__size-radio" type="radio" name="size" id="size_3" checked>
+                <label class="size-selection__size-radio-label" for="size_3">M</label>
+                <input class="size-selection__size-radio" type="radio" name="size" id="size_4">
+                <label class="size-selection__size-radio-label" for="size_4">L</label>
+                <input class="size-selection__size-radio" type="radio" name="size" id="size_5">
+                <label class="size-selection__size-radio-label" for="size_5">XL</label>
+              </div>
+              <div class="ware-card__color-selection color-selection">
+                <label class="visually-hidden" for="color_1">Черный</label>
+                <input class="color-selection__color-radio" type="radio" name="color" id="color_1" checked>
+                <label class="visually-hidden" for="color_2">Голубой</label>
+                <input class="color-selection__color-radio" type="radio" name="color" id="color_2">
+                <label class="visually-hidden" for="color_3">Бежевый</label>
+                <input checked class="color-selection__color-radio" type="radio" name="color" id="color_3">
+              </div>
+              <div class="ware-card__count-selection count-selection">
+                <div>
+                  <span class="count-selection__old-price">12 000</span>
+                  <span class="count-selection__price">10 000</span>
+                </div>
+                <div>
+                  <button class="count-selection__button" type="button">
+                    <span>Убавить количетво товара</span>
+                  </button>
+                  <span class="count-selection__count">2</span>
+                  <button class="count-selection__button" type="button">
+                    <span>Прибавить количетво товара</span>
+                  </button>
+                </div>
+                <div>
+                  <span class="count-selection__final-old-price">24 000</span>
+                  <span class="count-selection__final-price">20 000</span>
+                </div>
+              </div>
+              <button type="button">Удалить из заказа</button>
+            </article>
+          </form>
+        </li>
+        <li>
+          <form action="#">
+            <article class="order__ware-card">
+              <a href="#">
+                <img class="ware-card__image" src="./img/wares/woman_hat_zolla_891_256.png" alt="шапка черного цвета"
+                  width="90" height="111">
+              </a>
+              <h3 class="ware-card__title">
+                <a href="#">Вязанная шапка Zolla</a>
+              </h3>
+              <dl class="ware-card__characteristic">
+                <dt>Артикул</dt>
+                <dd>891-256</dd>
+                <dt>Сезон</dt>
+                <dd>Демисезон</dd>
+              </dl>
+              <div class="ware-card__size-selection size-selection">
+                <input class="size-selection__size-radio" type="radio" name="size" id="size_1">
+                <label class="size-selection__size-radio-label" for="size_1">XS</label>
+                <input class="size-selection__size-radio" type="radio" name="size" id="size_2">
+                <label class="size-selection__size-radio-label" for="size_2">S</label>
+                <input class="size-selection__size-radio" type="radio" name="size" id="size_3" checked>
+                <label class="size-selection__size-radio-label" for="size_3">M</label>
+                <input class="size-selection__size-radio" type="radio" name="size" id="size_4" disabled>
+                <label class="size-selection__size-radio-label" for="size_4">L</label>
+                <input class="size-selection__size-radio" type="radio" name="size" id="size_5" disabled>
+                <label class="size-selection__size-radio-label" for="size_5">XL</label>
+              </div>
+              <div class="ware-card__color-selection color-selection">
+                <label class="visually-hidden" for="color_1">Черный</label>
+                <input class="color-selection__color-radio" type="radio" name="color" id="color_1" checked>
+              </div>
+              <div class="ware-card__count-selection count-selection">
+                <div>
+                  <span class="count-selection__price">500</span>
+                </div>
+                <div>
+                  <button class="count-selection__button" type="button">
+                    <span>Убавить количетво товара</span>
+                  </button>
+                  <span class="count-selection__count">1</span>
+                  <button class="count-selection__button" type="button">
+                    <span>Прибавить количетво товара</span>
+                  </button>
+                </div>
+                <div>
+                  <span class="count-selection__final-price">500</span>
+                </div>
+              </div>
+              <button type="button">Удалить из заказа</button>
+            </article>
+          </form>
+        </li>
+      </ul>
+
+      <form class="order__form order-form" action="#">
+        <fieldset class="order-form__fieldset">
+          <legend class="order-form__legend">Контактные данные</legend>
+          <input type="text" placeholder="Имя">
+          <input type="text" placeholder="Фамилия">
+          <input type="tel" placeholder="Телефон">
+          <input type="email" placeholder="Email">
+          <input type="search" placeholder="Адрес доставки">
+        </fieldset>
+        <div>Map</div>
+        <fieldset class="order-form__fieldset">
+          <legend class="order-form__legend">Оплата</legend>
+          <input class="order-form__payment-radio" type="radio" name="payment-method" id="payment-cash" checked>
+          <label class="order-form__payment-radio-label" for="payment-cash">Наличными курьеру</label>
+          <input class="order-form__payment-radio" type="radio" name="payment-method" id="payment-card">
+          <label class="order-form__payment-radio-label" for="payment-card">Картой курьеру</label>
+          <input class="order-form__payment-radio" type="radio" name="payment-method" id="payment-online">
+          <label class="order-form__payment-radio-label" for="payment-online">Картой онлайн</label>
+        </fieldset>
+        <fieldset class="order-form__fieldset">
+          <legend class="order-form__legend">Комментарий к заказу</legend>
+          <textarea cols="30" rows="10"></textarea>
+          <span>Использовано 0/142 символов</span>
+        </fieldset>
+        <div class="order-form__subtotal">
+          <dl class="order-form__subtotal-sum-list">
+            <dt>Товары</dt>
+            <dd>24 500</dd>
+            <dt>Скидка</dt>
+            <dd>- 4 500</dd>
+            <dt>Акции</dt>
+            <dd>- 4 000</dd>
+            <dt>Промокод</dt>
+            <dd>- 500</dd>
+            <dt>Доставка</dt>
+            <dd>200</dd>
+          </dl>
+          <div>
+            <input type="checkbox" id="warehouse">
+            <label for="warehouse">Получить товар со склада</label>
+            <span>Сроки получения могут измениться</span>
+          </div>
+          <div>
+            <span>Итого:</span>
+            <span>20 700</span>
+          </div>
+          <input type="text" placeholder="Введите промокод">
+          <button type="submit">Оформить заказ</button>
+          <span>Нажимая кнопку “Оформить заказ”, Вы соглашаетесь с
+            <a href="#">политикой конфиденциальности.</a>
+          </span>
+        </div>
+      </form>
+    </section>
+
+  </main>
 
   <footer class="page__footer"></footer>
 
