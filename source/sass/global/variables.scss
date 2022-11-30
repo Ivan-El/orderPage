@@ -1,0 +1,31 @@
+// Base Colors
+
+$base-black: #000000;
+$base-grey: #6e6e6e;
+$base-grey-lighter: #c8c8c8;
+$base-grey-lightest: #f1f1f1;
+$base-white: #ffffff;
+
+// State Colors
+
+$error-color: #d92c2c;
+$success-color: #007e06;
+
+// Product Colors
+
+$product-blue: #106da1;
+$product-brown: #ae6d0c;
+$product-black: #444444;
+
+// Text
+
+$main-font-size: 16px;
+$main-line-height: 21px;
+$main-font: "Helvetica", "Arial", sans-serif;
+$main-font-color: $base-black;
+
+// Media Query
+
+$page-min-width: 320px;
+$tablet-width: 768px;
+$desktop-width: 1200px;
