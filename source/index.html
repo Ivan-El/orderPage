@@ -8,19 +8,19 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body class="js-no">
   <header class="page__header page-header">
     <div class="page-header__container">
       <nav class="page-header__site-navigation site-navigation">
-        <ul class="site-navigation__list">
+        <ul class="page-header__site-navigation-list site-navigation__list">
           <li>
-            <a href="#">Каталог</a>
+            <a class="site-navigation__link" href="#">Каталог</a>
           </li>
           <li>
-            <a href="#">О компании</a>
+            <a class="site-navigation__link" href="#">О компании</a>
           </li>
           <li>
-            <a href="#">Магазины</a>
+            <a class="site-navigation__link" href="#">Магазины</a>
           </li>
         </ul>
       </nav>
@@ -30,17 +30,22 @@
       <nav class="page-header__user-navigation user-navigation">
         <ul class="user-navigation__list">
           <li class="user-navigation__item user-navigation__item--only-desktop">
-            <form action="#" method="GET">
-              <input type="search" name="page-header-search">
+
+            <form class="user-navigation__search-form search-form" action="#" method="GET">
+              <input class="search-form__search-input js-search-input-hidden" type="text" name="page-header-search" placeholder="Поиск">
+              <button class="search-form__button" type="submit">
+                <span class="visually-hidden">Найти</span>
+              </button>
             </form>
+
           </li>
           <li class="user-navigation__item user-navigation__item--only-desktop">
-            <a class="user-navigation__link" href="#">
+            <a class="user-navigation__link user-navigation__link--profile" href="#">
               <span class="visually-hidden">Личный кабинет</span>
             </a>
           </li>
           <li class="user-navigation__item user-navigation__item--only-desktop">
-            <a class="user-navigation__link" href="#">
+            <a class="user-navigation__link user-navigation__link--favorites" href="#">
               <span class="visually-hidden">Избранное</span>
             </a>
           </li>
@@ -53,6 +58,7 @@
       </nav>
       <button class="page-header__hamburger-button hamburger-button">
         <span class="visually-hidden">Открыть мобильное меню</span>
+        <span class="hamburger-button__toggle-bar"></span>
       </button>
     </div>
   </header>

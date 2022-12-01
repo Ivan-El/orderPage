@@ -1,0 +1,29 @@
+.search-form {
+  position: relative;
+}
+
+.search-form__search-input {
+  padding: 4px 8px;
+  width: 150px;
+  border: none;
+  border-radius: 4px;
+
+  &:focus {
+    outline: 1px solid $base-grey;
+  }
+}
+
+.search-form__search-input.js-search-input-hidden {
+  display: none;
+}
+
+.search-form__button {
+  width: 50px;
+  height: 50px;
+  border: none;
+  background-color: transparent;
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("../../../img/icons/stack.svg#search_icon");
+}

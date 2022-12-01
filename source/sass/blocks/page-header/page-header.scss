@@ -1,23 +1,70 @@
-// .page-header {
-
-// }
-
 .page-header__container {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px 16px 0;
+
+  @media (min-width: $tablet-width) {
+    padding: 20px 30px 0;
+  }
 }
 
 .page-header__site-navigation {
   display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
 }
 
 .page-header__user-navigation {
   margin: 0 24px 0 auto;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+  }
 }
 
 .page-header__hamburger-button {
   width: 32px;
   height: 32px;
+}
+
+.js-no .page-header__hamburger-button {
+  display: none;
+}
+
+.js-no .page-header__container,
+.js-menu-open .page-header__container {
+  margin-bottom: 150px;
+  border-bottom: 1px solid $base-grey;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+    border: none;
+  }
+}
+
+.js-no .page-header__site-navigation,
+.js-menu-open .page-header__site-navigation {
+  position: absolute;
+  content: "";
+  top: 53px;
+  left: 0;
+  display: block;
+
+  @media (min-width: $tablet-width) {
+    position: static;
+  }
+}
+
+.js-no .page-header__site-navigation-list,
+.js-menu-open .page-header__site-navigation-list {
+  width: 100vw;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    width: fit-content;
+  }
 }

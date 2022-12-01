@@ -1,13 +1,22 @@
 .user-navigation__list {
   display: flex;
+  align-items: center;
   column-gap: 20px;
   margin: 0;
   padding: 0;
   list-style: none;
+
+  @media (min-width: $tablet-width) {
+    column-gap: 0;
+  }
 }
 
 .user-navigation__item--only-desktop {
   display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
 }
 
 .user-navigation__link {
@@ -17,8 +26,32 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+  transition: all 0.3s ease-in;
+
+  &:focus,
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 50px;
+    height: 50px;
+    background-size: 20px 20px;
+  }
 }
 
 .user-navigation__link--cart {
-  background-image: url('../../../img/icons/stack.svg#cart_icon');
+  background-image: url("../../../img/icons/stack.svg#cart_icon");
+}
+
+.user-navigation__link--favorites {
+  background-image: url("../../../img/icons/stack.svg#favorites_icon");
+}
+
+.user-navigation__link--profile {
+  background-image: url("../../../img/icons/stack.svg#profile_icon");
 }

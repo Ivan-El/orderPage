@@ -2,25 +2,62 @@
   position: relative;
   border: none;
   background-color: transparent;
-  transition: .3s ease-in;
+  cursor: pointer;
 
-   &::before,
-   &::after {
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.hamburger-button__toggle-bar {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s ease-in;
+
+  &::before,
+  &::after {
     position: absolute;
-    content: '';
+    content: "";
     height: 2px;
-    background: $base-black;
-   }
+    background-color: $base-black;
+    transition: all 0.3s ease-in;
+  }
 
-   &::before {
+  &::before {
     width: 32px;
     top: 12px;
     left: 0;
-   }
+  }
 
-   &::after {
+  &::after {
     width: 18px;
     top: 21px;
     left: 14px;
-   }
+  }
+}
+
+.hamburger-button--open .hamburger-button__toggle-bar {
+  &::before,
+  &::after {
+    width: 16px;
+    top: 50%;
+    left: 25%;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
 }
