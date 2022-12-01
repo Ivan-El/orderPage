@@ -25,19 +25,18 @@
         </ul>
       </nav>
       <a href="#">
-        <img src="./img/icons/stack.svg#logo" alt="Логотип компании" width="100" height="22">
+        <img class="logo" src="./img/icons/stack.svg#logo" alt="Логотип компании" width="100" height="22">
       </a>
       <nav class="page-header__user-navigation user-navigation">
         <ul class="user-navigation__list">
           <li class="user-navigation__item user-navigation__item--only-desktop">
-
             <form class="user-navigation__search-form search-form" action="#" method="GET">
-              <input class="search-form__search-input js-search-input-hidden" type="text" name="page-header-search" placeholder="Поиск">
+              <input class="search-form__search-input js-search-input-hidden" type="text" name="page-header-search"
+                placeholder="Поиск">
               <button class="search-form__button" type="submit">
                 <span class="visually-hidden">Найти</span>
               </button>
             </form>
-
           </li>
           <li class="user-navigation__item user-navigation__item--only-desktop">
             <a class="user-navigation__link user-navigation__link--profile" href="#">
@@ -63,24 +62,26 @@
     </div>
   </header>
 
-  <main class="page__main main">
-    <ul class="breadcrumbs">
-      <li>
-        <a href="#">Главная</a>
+  <main class="page__main page-main">
+    <ul class="page-main__breadcrumbs breadcrumbs">
+      <li class="breadcrumbs__item">
+        <a class="breadcrumbs__link" href="#">Главная</a>
       </li>
-      <li>
-        <a href="#">Оформление заказа</a>
+      <li class="breadcrumbs__item">
+        <a class="breadcrumbs__link breadcrumbs__link--current" href="#">Оформление заказа</a>
       </li>
     </ul>
 
-    <h1>Оформление заказа</h1>
-    <div>
-      <span>Есть аккаунт?</span>
-      <a href="#">Войти</a>
+    <div class="page-main__title-wrapper">
+      <h1 class="page-main__main-title">Оформление заказа</h1>
+      <span class="login-offer">
+        Есть аккаунт?
+        <a class="login-offer__link" href="#">Войти</a>
+      </span>
     </div>
 
     <section class="order">
-      <h2 class="order__title">3 товара на сумму 25 000 ₽ </h2>
+      <h2 class="order__title">3 товара на сумму 25 000 <span>&#8381;</span></h2>
 
       <ul class="order__ware-list">
         <li>
@@ -296,7 +297,8 @@
       <span>© All rights reserved</span>
       <a href="#">Публичная оферта</a>
       <a href="#">Политика конфиденциальности</a>
-      <a href="https://5corners.ru/">Сделано в студии <img src="./img/icons/stack.svg#5_corners_logo" alt="логотип компании 5 Углов" width="21" height="21"> 5 УГЛОВ</a>
+      <a href="https://5corners.ru/">Сделано в студии <img src="./img/icons/stack.svg#5_corners_logo"
+          alt="логотип компании 5 Углов" width="21" height="21"> 5 УГЛОВ</a>
     </div>
   </footer>
 

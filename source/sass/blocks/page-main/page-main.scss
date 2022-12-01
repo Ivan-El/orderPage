@@ -1,0 +1,32 @@
+.page-main__breadcrumbs {
+  margin-bottom: 32px;
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 40px;
+  }
+}
+
+.page-main__title-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 32px;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    gap: 20px;
+  }
+}
+
+.page-main__main-title {
+  margin: 0;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 30px;
+
+  @media (min-width: $desktop-width) {
+    font-size: 40px;
+    line-height: 42px;
+  }
+}
