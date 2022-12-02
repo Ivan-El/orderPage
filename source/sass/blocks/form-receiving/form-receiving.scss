@@ -1,0 +1,58 @@
+.form-receiving {
+  padding: 12px 0;
+  border-top: 1px solid $base-grey-lighter;
+  border-bottom: 1px solid $base-grey-lighter;
+}
+
+.form-receiving__label {
+  position: relative;
+  display: block;
+  padding: 0 47px 10px 0;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 7px;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    transition: all 0.3s ease-in;
+  }
+
+  &::before {
+    top: 9px;
+    right: 0;
+    width: 34px;
+    height: 14px;
+    background-color: $base-grey-lighter;
+    border-radius: 6px;
+  }
+
+  &::after {
+    top: 5px;
+    right: 19px;
+    width: 22px;
+    height: 22px;
+    background-color: $base-grey;
+    border-radius: 50%;
+  }
+}
+
+.form-receiving__annotation {
+  font-size: 12px;
+  line-height: 15px;
+  color: $base-grey;
+}
+
+
+.form-receiving__checkbox:checked + .form-receiving__label::after {
+    right: -6px;
+    background-color: $base-black;
+    border-radius: 50%;
+
+}
+
+// @media (min-width: $tablet-width) {}

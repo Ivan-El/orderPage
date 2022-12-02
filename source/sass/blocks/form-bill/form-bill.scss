@@ -1,0 +1,51 @@
+.form-bill__row {
+  margin-bottom: 12px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 20px;
+  }
+}
+
+.form-bill__row--sale {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+}
+
+.form-bill__position-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-bill__position {
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+.form-bill__position-sum {
+  margin: 0;
+  font-weight: 700;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+.form-bill__row--sale .form-bill__position-sum {
+  color: $error-color;
+}
+
+.form-bill__sale-position-sum,
+.form-bill__sale-position {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 21px;
+  }
+}

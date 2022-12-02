@@ -282,56 +282,131 @@
         </li>
       </ul>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       <form class="order__form order-form" action="#">
-        <fieldset class="order-form__fieldset">
+
+        <fieldset class="order-form__fieldset order-form__fieldset--contacts">
           <legend class="order-form__legend">Контактные данные</legend>
-          <input type="text" placeholder="Имя">
-          <input type="text" placeholder="Фамилия">
-          <input type="tel" placeholder="Телефон">
-          <input type="email" placeholder="Email">
-          <input type="search" placeholder="Адрес доставки">
+          <div class="order-form__text-input-wrapper js-active-input">
+            <input class="order-form__text-input" type="text" placeholder="Имя">
+          </div>
+          <div class="order-form__text-input-wrapper">
+            <input class="order-form__text-input" type="text" placeholder="Фамилия">
+          </div>
+          <div class="order-form__text-input-wrapper">
+            <input class="order-form__text-input" type="tel" placeholder="Телефон">
+          </div>
+          <div class="order-form__text-input-wrapper">
+            <input class="order-form__text-input" type="email" placeholder="Email">
+          </div>
+          <div class="order-form__text-input-wrapper">
+            <input class="order-form__text-input" type="text" placeholder="Адрес доставки">
+          </div>
         </fieldset>
-        <div>Map</div>
-        <fieldset class="order-form__fieldset">
+
+        <div class="order-form__map">Map</div>
+
+        <fieldset class="order-form__fieldset order-form__fieldset--payment">
           <legend class="order-form__legend">Оплата</legend>
-          <input class="order-form__payment-radio" type="radio" name="payment-method" id="payment-cash" checked>
-          <label class="order-form__payment-radio-label" for="payment-cash">Наличными курьеру</label>
-          <input class="order-form__payment-radio" type="radio" name="payment-method" id="payment-card">
-          <label class="order-form__payment-radio-label" for="payment-card">Картой курьеру</label>
-          <input class="order-form__payment-radio" type="radio" name="payment-method" id="payment-online">
-          <label class="order-form__payment-radio-label" for="payment-online">Картой онлайн</label>
+          <div class="order-form__payment-radio-wrapper">
+            <input class="order-form__payment-radio" type="radio" name="payment-method" id="payment-cash" checked>
+            <label class="order-form__payment-radio-label" for="payment-cash">Наличными курьеру</label>
+          </div>
+          <div class="order-form__payment-radio-wrapper">
+            <input class="order-form__payment-radio" type="radio" name="payment-method" id="payment-card">
+            <label class="order-form__payment-radio-label" for="payment-card">Картой курьеру</label>
+          </div>
+          <div class="order-form__payment-radio-wrapper">
+            <input class="order-form__payment-radio" type="radio" name="payment-method" id="payment-online">
+            <label class="order-form__payment-radio-label" for="payment-online">Картой онлайн</label>
+          </div>
         </fieldset>
-        <fieldset class="order-form__fieldset">
+        <fieldset class="order-form__fieldset order-form__fieldset--comment">
           <legend class="order-form__legend">Комментарий к заказу</legend>
-          <textarea cols="30" rows="10"></textarea>
-          <span>Использовано 0/142 символов</span>
+          <textarea class="order-form__textarea" placeholder="Комментарий к заказу"></textarea>
+          <span class="order-form__textarea-word-counter">Использовано 0/142 символов</span>
         </fieldset>
         <div class="order-form__subtotal">
-          <dl class="order-form__subtotal-sum-list">
-            <dt>Товары</dt>
-            <dd>24 500</dd>
-            <dt>Скидка</dt>
-            <dd>- 4 500</dd>
-            <dt>Акции</dt>
-            <dd>- 4 000</dd>
-            <dt>Промокод</dt>
-            <dd>- 500</dd>
-            <dt>Доставка</dt>
-            <dd>200</dd>
+          <dl class="order-form__subtotal-bill form-bill">
+            <div class="form-bill__row">
+              <div class="form-bill__position-wrapper">
+                <dt class="form-bill__position">Товары</dt>
+                <dd class="form-bill__position-sum">24 500 <span>&#8381;</span></dd>
+              </div>
+            </div>
+            <div class="form-bill__row form-bill__row--sale">
+              <div class="form-bill__position-wrapper">
+                <dt class="form-bill__position">Скидка</dt>
+                <dd class="form-bill__position-sum">- 4 500 <span>&#8381;</span></dd>
+              </div>
+              <div class="form-bill__position-wrapper">
+                <dt class="form-bill__sale-position">Акции</dt>
+                <dd class="form-bill__position-sum form-bill__sale-position-sum">- 4 000 <span>&#8381;</span></dd>
+              </div>
+              <div class="form-bill__position-wrapper">
+                <dt class="form-bill__sale-position">Промокод</dt>
+                <dd class="form-bill__position-sum form-bill__sale-position-sum">- 500 <span>&#8381;</span></dd>
+              </div>
+            </div>
+            <div class="form-bill__row">
+              <div class="form-bill__position-wrapper">
+                <dt class="form-bill__position">Доставка</dt>
+                <dd class="form-bill__position-sum">200 <span>&#8381;</span></dd>
+              </div>
+            </div>
           </dl>
-          <div>
-            <input type="checkbox" id="warehouse">
-            <label for="warehouse">Получить товар со склада</label>
-            <span>Сроки получения могут измениться</span>
+          <div class="order-form__receiving form-receiving">
+            <input class="visually-hidden form-receiving__checkbox" type="checkbox" id="warehouse">
+            <label class="form-receiving__label" for="warehouse">Получить товар со склада</label>
+            <span class="form-receiving__annotation">Сроки получения могут измениться</span>
           </div>
-          <div>
+          <div class="order-form__total">
             <span>Итого:</span>
-            <span>20 700</span>
+            <span>20 700 <span>&#8381;</span></span>
           </div>
-          <input type="text" placeholder="Введите промокод">
-          <button type="submit">Оформить заказ</button>
-          <span>Нажимая кнопку “Оформить заказ”, Вы соглашаетесь с
-            <a href="#">политикой конфиденциальности.</a>
+          <input class="order-form__promocode-input" type="text" placeholder="Введите промокод">
+          <button class="button order-form__submit-button" type="submit">Оформить заказ</button>
+
+          <span class="order-form__privacy">Нажимая кнопку “Оформить заказ”, Вы соглашаетесь с
+            <a class="order-form__privacy-link" href="#">политикой конфиденциальности.</a>
           </span>
         </div>
       </form>
