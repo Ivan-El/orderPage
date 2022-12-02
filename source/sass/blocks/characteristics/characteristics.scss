@@ -1,0 +1,17 @@
+.characteristics {
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.characteristics__row {
+  display: flex;
+  column-gap: 4px;
+}
+
+.characteristics__term {
+  color: $base-grey;
+}
+
+.characteristics__desc {
+  margin: 0;
+}

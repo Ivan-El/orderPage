@@ -1,0 +1,68 @@
+.count-selection {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.count-selection__price-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.count-selection__price {
+  @media (min-width: $tablet-width) {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+.count-selection__old-price,
+.count-selection__final-old-price {
+  font-size: 12px;
+  line-height: 15px;
+  color: $base-grey;
+  text-decoration: line-through;
+}
+
+.count-selection__count-wrapper {
+  display: flex;
+  align-items: center;
+  column-gap: 27px;
+  padding: 5px 10px;
+  background-color: $base-grey-lightest;
+  border-radius: 5px;
+
+  @media (min-width: $desktop-width) {
+    column-gap: 40px;
+  }
+}
+
+.count-selection__count-button {
+  width: 32px;
+  height: 32px;
+  border: none;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 12px;
+  transition: all 0.3s ease-in;
+
+  &:focus,
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active,
+  &:disabled {
+    opacity: 0.3;
+  }
+}
+
+.count-selection__count-button--minus {
+  background-image: url('../../../img/icons/stack.svg#minus_icon');
+
+}
+
+.count-selection__count-button--plus {
+  background-image: url('../../../img/icons/stack.svg#plus_icon');
+}

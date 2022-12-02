@@ -1,0 +1,128 @@
+.ware-card {
+  display: grid;
+  grid-template-columns: auto auto;
+  position: relative;
+  padding: 16px 0;
+  border-top: 1px solid $base-grey-lighter;
+  border-bottom: 1px solid $base-grey-lighter;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: max-content auto max-content;
+    grid-template-rows: auto auto;
+    gap: 15px 10px;
+    padding: 25px 0;
+  }
+}
+
+.ware-card__image {
+  width: 90px;
+  height: 111px;
+  object-fit: contain;
+
+  @media (min-width: $tablet-width) {
+    width: 130px;
+    height: 160px;
+  }
+}
+
+.ware-card__image-link {
+  @media (min-width: $tablet-width) {
+    grid-row: 1 / 3;
+  }
+}
+
+.ware-card__title {
+  margin: 0;
+  padding: 0 26px 0 12px;
+  font-size: 14px;
+  line-height: 18px;
+
+  @media (min-width: $tablet-width) {
+    width: 50%;
+    padding: 0;
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+.ware-card__link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.ware-card__characteristics-wrapper {
+  grid-column: 1 / -1;
+  margin-bottom: 16px;
+
+  @media (min-width: $tablet-width) {
+    grid-column: 2 / 3;
+    margin-bottom: 0;
+  }
+}
+
+.ware-card__characteristics {
+  margin: 0 0 16px;
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 10px;
+  }
+}
+
+.ware-card__size-selection {
+  margin-bottom: 16px;
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 10px;
+  }
+}
+
+.ware-card__count-selection {
+  grid-column: 1 / -1;
+
+  @media (min-width: $tablet-width) {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+    margin-right: 32px;
+  }
+}
+
+.ware-card__delete-button {
+  position: absolute;
+  content: "";
+  top: 16px;
+  right: 0;
+  width: 22px;
+  height: 22px;
+  border: none;
+  background-color: transparent;
+  transition: all 0.3s ease-in;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    top: 45%;
+    width: 18px;
+    height: 2px;
+    background-color: $base-black;
+  }
+
+  &::before {
+    left: 10%;
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    left: 10%;
+    transform: rotate(-45deg);
+  }
+}

@@ -1,0 +1,35 @@
+.size-selection {
+  display: flex;
+  column-gap: 9px;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+
+  @media (min-width: $desktop-width) {
+    column-gap: 5px;
+  }
+}
+
+.size-selection__size-radio {
+  display: none;
+}
+
+.size-selection__size-radio-label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 30px;
+  height: 30px;
+  background-color: $base-grey-lightest;
+  border-radius: 6px;
+  transition: all 0.3s ease-in;
+}
+
+.size-selection__size-radio:checked + .size-selection__size-radio-label {
+  color: $base-white;
+  background-color: $base-black;
+}
+
+.size-selection__size-radio:disabled + .size-selection__size-radio-label {
+  color: $base-grey-lighter;
+}

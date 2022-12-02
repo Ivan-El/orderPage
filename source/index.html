@@ -71,7 +71,6 @@
         <a class="breadcrumbs__link breadcrumbs__link--current" href="#">Оформление заказа</a>
       </li>
     </ul>
-
     <div class="page-main__title-wrapper">
       <h1 class="page-main__main-title">Оформление заказа</h1>
       <span class="login-offer">
@@ -82,117 +81,202 @@
 
     <section class="order">
       <h2 class="order__title">3 товара на сумму 25 000 <span>&#8381;</span></h2>
-
-      <ul class="order__ware-list">
-        <li>
+      <ul class="order__wares-list">
+        <li class="order__wares-list-item">
           <form action="#">
-            <article class="order__ware-card">
-              <a href="#">
+            <article class="order__ware-card ware-card">
+              <a class="ware-card__image-link" href="#">
                 <img class="ware-card__image" src="./img/wares/woman_jacket_tophills_512_05.png"
                   alt="куртка черного цвета" width="90" height="111">
               </a>
               <h3 class="ware-card__title">
-                <a href="#">Утепленная стеганная куртка женская Top Hills</a>
+                <a class="ware-card__link" href="#">Утепленная стеганная куртка женская Top Hills</a>
               </h3>
-              <dl class="ware-card__characteristic">
-                <dt>Артикул</dt>
-                <dd>512-05</dd>
-                <dt>Сезон</dt>
-                <dd>Осень-зима</dd>
-              </dl>
-              <div class="ware-card__size-selection size-selection">
-                <input class="size-selection__size-radio" type="radio" name="size" id="512-05-size-1">
-                <label class="size-selection__size-radio-label" for="512-05-size-1">XS</label>
-                <input class="size-selection__size-radio" type="radio" name="size" id="512-05-size-2">
-                <label class="size-selection__size-radio-label" for="512-05-size-2">S</label>
-                <input class="size-selection__size-radio" type="radio" name="size" id="512-05-size-3" checked>
-                <label class="size-selection__size-radio-label" for="512-05-size-3">M</label>
-                <input class="size-selection__size-radio" type="radio" name="size" id="512-05-size-4">
-                <label class="size-selection__size-radio-label" for="512-05-size-4">L</label>
-                <input class="size-selection__size-radio" type="radio" name="size" id="512-05-size-5">
-                <label class="size-selection__size-radio-label" for="512-05-size-5">XL</label>
-              </div>
-              <div class="ware-card__color-selection color-selection">
-                <label class="visually-hidden" for="512-05-color-1">Черный</label>
-                <input class="color-selection__color-radio" type="radio" name="color" id="512-05-color-1" checked>
-                <label class="visually-hidden" for="512-05-color-2">Голубой</label>
-                <input class="color-selection__color-radio" type="radio" name="color" id="512-05-color-2">
-                <label class="visually-hidden" for="512-05-color-3">Бежевый</label>
-                <input checked class="color-selection__color-radio" type="radio" name="color" id="512-05-color-3">
+              <div class="ware-card__characteristics-wrapper">
+                <dl class="ware-card__characteristics characteristics">
+                  <div class="characteristics__row">
+                    <dt class="characteristics__term">Артикул</dt>
+                    <dd class="characteristics__desc">512-05</dd>
+                  </div>
+                  <div class="characteristics__row">
+                    <dt class="characteristics__term">Сезон</dt>
+                    <dd class="characteristics__desc">Осень-зима</dd>
+                  </div>
+                </dl>
+                <div class="ware-card__size-selection size-selection">
+                  <input class="size-selection__size-radio" type="radio" name="size" id="512-05-size-1">
+                  <label class="size-selection__size-radio-label" for="512-05-size-1">XS</label>
+                  <input class="size-selection__size-radio" type="radio" name="size" id="512-05-size-2">
+                  <label class="size-selection__size-radio-label" for="512-05-size-2">S</label>
+                  <input class="size-selection__size-radio" type="radio" name="size" id="512-05-size-3" checked>
+                  <label class="size-selection__size-radio-label" for="512-05-size-3">M</label>
+                  <input class="size-selection__size-radio" type="radio" name="size" id="512-05-size-4">
+                  <label class="size-selection__size-radio-label" for="512-05-size-4">L</label>
+                  <input class="size-selection__size-radio" type="radio" name="size" id="512-05-size-5">
+                  <label class="size-selection__size-radio-label" for="512-05-size-5">XL</label>
+                </div>
+                <div class="ware-card__color-selection color-selection">
+                  <label class="visually-hidden" for="512-05-color-1">Черный</label>
+                  <input class="color-selection__color-radio color-selection__color-radio--black" type="radio" name="color" id="512-05-color-1" checked>
+                  <label class="visually-hidden" for="512-05-color-2">Голубой</label>
+                  <input class="color-selection__color-radio  color-selection__color-radio--blue" type="radio" name="color" id="512-05-color-2">
+                  <label class="visually-hidden" for="512-05-color-3">Бежевый</label>
+                  <input checked class="color-selection__color-radio  color-selection__color-radio--brown" type="radio" name="color" id="512-05-color-3">
+                </div>
               </div>
               <div class="ware-card__count-selection count-selection">
-                <div>
-                  <span class="count-selection__old-price">12 000</span>
-                  <span class="count-selection__price">10 000</span>
+                <div class="count-selection__price-wrapper">
+                  <span class="count-selection__old-price">12 000 <span>&#8381;</span></span>
+                  <span class="count-selection__price">10 000 <span>&#8381;</span></span>
                 </div>
-                <div>
-                  <button class="count-selection__button" type="button">
-                    <span>Убавить количетво товара</span>
+
+                <div class="count-selection__count-wrapper">
+                  <button class="count-selection__count-button count-selection__count-button--minus" type="button">
+                    <span class="visually-hidden">Убавить количетво товара</span>
                   </button>
                   <span class="count-selection__count">2</span>
-                  <button class="count-selection__button" type="button">
-                    <span>Прибавить количетво товара</span>
+                  <button class="count-selection__count-button count-selection__count-button--plus" type="button">
+                    <span class="visually-hidden">Прибавить количетво товара</span>
                   </button>
                 </div>
-                <div>
-                  <span class="count-selection__final-old-price">24 000</span>
-                  <span class="count-selection__final-price">20 000</span>
+
+                <div class="count-selection__price-wrapper">
+                  <span class="count-selection__final-old-price">24 000 <span>&#8381;</span></span>
+                  <span class="count-selection__final-price">20 000 <span>&#8381;</span></span>
                 </div>
               </div>
-              <button type="button">Удалить из заказа</button>
+              <button class="ware-card__delete-button" type="button">
+                <span class="visually-hidden">Убрать товар</span>
+              </button>
             </article>
           </form>
         </li>
-        <li>
+
+        <li class="order__wares-list-item">
           <form action="#">
-            <article class="order__ware-card">
-              <a href="#">
+            <article class="order__ware-card ware-card">
+              <a class="ware-card__image-link" href="#">
+                <img class="ware-card__image" src="https://via.placeholder.com/90x111?text=mock" alt="mock"
+                  width="90" height="111">
+              </a>
+              <h3 class="ware-card__title">
+                <a class="ware-card__link" href="#">Наименование товара</a>
+              </h3>
+              <div class="ware-card__characteristics-wrapper">
+                <dl class="ware-card__characteristics characteristics">
+                  <div class="characteristics__row">
+                    <dt class="characteristics__term">Артикул</dt>
+                    <dd class="characteristics__desc">mock</dd>
+                  </div>
+                  <div class="characteristics__row">
+                    <dt class="characteristics__term">Сезон</dt>
+                    <dd class="characteristics__desc">mock</dd>
+                  </div>
+                </dl>
+                <div class="ware-card__size-selection size-selection">
+                  <input class="size-selection__size-radio" type="radio" name="size" id="mock-size-1">
+                  <label class="size-selection__size-radio-label" for="mock-size-1">XS</label>
+                  <input class="size-selection__size-radio" type="radio" name="size" id="mock-size-2">
+                  <label class="size-selection__size-radio-label" for="mock-size-2">S</label>
+                  <input class="size-selection__size-radio" type="radio" name="size" id="mock-size-3" checked>
+                  <label class="size-selection__size-radio-label" for="mock-size-3">M</label>
+                  <input class="size-selection__size-radio" type="radio" name="size" id="mock-size-4" disabled>
+                  <label class="size-selection__size-radio-label" for="mock-size-4">L</label>
+                  <input class="size-selection__size-radio" type="radio" name="size" id="mock-size-5" disabled>
+                  <label class="size-selection__size-radio-label" for="mock-size-5">XL</label>
+                </div>
+                <div class="ware-card__color-selection color-selection">
+                  <label class="visually-hidden" for="mock-color_1">mock</label>
+                  <input class="color-selection__color-radio color-selection__color-radio--black" type="radio" name="color" id="mock-color_1" checked>
+                </div>
+              </div>
+
+
+              <div class="ware-card__count-selection count-selection">
+                <div class="count-selection__price-wrapper">
+                  <span class="count-selection__price">mock <span>&#8381;</span></span>
+                </div>
+                <div class="count-selection__count-wrapper">
+                  <button class="count-selection__count-button count-selection__count-button--minus" type="button" disabled>
+                    <span class="visually-hidden">Убавить количетво товара</span>
+                  </button>
+                  <span class="count-selection__count">1</span>
+                  <button class="count-selection__count-button count-selection__count-button--plus" type="button">
+                    <span class="visually-hidden">Прибавить количетво товара</span>
+                  </button>
+                </div>
+                <div class="count-selection__price-wrapper">
+                  <span class="count-selection__final-price">mock <span>&#8381;</span></span>
+                </div>
+              </div>
+              <button class="ware-card__delete-button" type="button">
+                <span class="visually-hidden">Убрать товар</span>
+              </button>
+            </article>
+          </form>
+        </li>
+
+
+        <li class="order__wares-list-item">
+          <form action="#">
+            <article class="order__ware-card ware-card">
+              <a class="ware-card__image-link" href="#">
                 <img class="ware-card__image" src="./img/wares/woman_hat_zolla_891_256.png" alt="шапка черного цвета"
                   width="90" height="111">
               </a>
               <h3 class="ware-card__title">
-                <a href="#">Вязанная шапка Zolla</a>
+                <a class="ware-card__link" href="#">Вязанная шапка Zolla</a>
               </h3>
-              <dl class="ware-card__characteristic">
-                <dt>Артикул</dt>
-                <dd>891-256</dd>
-                <dt>Сезон</dt>
-                <dd>Демисезон</dd>
-              </dl>
-              <div class="ware-card__size-selection size-selection">
-                <input class="size-selection__size-radio" type="radio" name="size" id="891-256-size-1">
-                <label class="size-selection__size-radio-label" for="891-256-size-1">XS</label>
-                <input class="size-selection__size-radio" type="radio" name="size" id="891-256-size-2">
-                <label class="size-selection__size-radio-label" for="891-256-size-2">S</label>
-                <input class="size-selection__size-radio" type="radio" name="size" id="891-256-size-3" checked>
-                <label class="size-selection__size-radio-label" for="891-256-size-3">M</label>
-                <input class="size-selection__size-radio" type="radio" name="size" id="891-256-size-4" disabled>
-                <label class="size-selection__size-radio-label" for="891-256-size-4">L</label>
-                <input class="size-selection__size-radio" type="radio" name="size" id="891-256-size-5" disabled>
-                <label class="size-selection__size-radio-label" for="891-256-size-5">XL</label>
-              </div>
-              <div class="ware-card__color-selection color-selection">
-                <label class="visually-hidden" for="891-256-color_1">Черный</label>
-                <input class="color-selection__color-radio" type="radio" name="color" id="891-256-color_1" checked>
-              </div>
-              <div class="ware-card__count-selection count-selection">
-                <div>
-                  <span class="count-selection__price">500</span>
+              <div class="ware-card__characteristics-wrapper">
+                <dl class="ware-card__characteristics characteristics">
+                  <div class="characteristics__row">
+                    <dt class="characteristics__term">Артикул</dt>
+                    <dd class="characteristics__desc">891-256</dd>
+                  </div>
+                  <div class="characteristics__row">
+                    <dt class="characteristics__term">Сезон</dt>
+                    <dd class="characteristics__desc">Демисезон</dd>
+                  </div>
+                </dl>
+                <div class="ware-card__size-selection size-selection">
+                  <input class="size-selection__size-radio" type="radio" name="size" id="891-256-size-1">
+                  <label class="size-selection__size-radio-label" for="891-256-size-1">XS</label>
+                  <input class="size-selection__size-radio" type="radio" name="size" id="891-256-size-2">
+                  <label class="size-selection__size-radio-label" for="891-256-size-2">S</label>
+                  <input class="size-selection__size-radio" type="radio" name="size" id="891-256-size-3" checked>
+                  <label class="size-selection__size-radio-label" for="891-256-size-3">M</label>
+                  <input class="size-selection__size-radio" type="radio" name="size" id="891-256-size-4" disabled>
+                  <label class="size-selection__size-radio-label" for="891-256-size-4">L</label>
+                  <input class="size-selection__size-radio" type="radio" name="size" id="891-256-size-5" disabled>
+                  <label class="size-selection__size-radio-label" for="891-256-size-5">XL</label>
                 </div>
-                <div>
-                  <button class="count-selection__button" type="button">
-                    <span>Убавить количетво товара</span>
+                <div class="ware-card__color-selection color-selection">
+                  <label class="visually-hidden" for="891-256-color_1">Черный</label>
+                  <input class="color-selection__color-radio color-selection__color-radio--black" type="radio" name="color" id="891-256-color_1" checked>
+                </div>
+              </div>
+
+
+              <div class="ware-card__count-selection count-selection">
+                <div class="count-selection__price-wrapper">
+                  <span class="count-selection__price">500 <span>&#8381;</span></span>
+                </div>
+                <div class="count-selection__count-wrapper">
+                  <button class="count-selection__count-button count-selection__count-button--minus" type="button" disabled>
+                    <span class="visually-hidden">Убавить количетво товара</span>
                   </button>
                   <span class="count-selection__count">1</span>
-                  <button class="count-selection__button" type="button">
-                    <span>Прибавить количетво товара</span>
+                  <button class="count-selection__count-button count-selection__count-button--plus" type="button">
+                    <span class="visually-hidden">Прибавить количетво товара</span>
                   </button>
                 </div>
-                <div>
-                  <span class="count-selection__final-price">500</span>
+                <div class="count-selection__price-wrapper">
+                  <span class="count-selection__final-price">500 <span>&#8381;</span></span>
                 </div>
               </div>
-              <button type="button">Удалить из заказа</button>
+              <button class="ware-card__delete-button" type="button">
+                <span class="visually-hidden">Убрать товар</span>
+              </button>
             </article>
           </form>
         </li>
