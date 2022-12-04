@@ -18,7 +18,7 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-image: url('../../../img/icons/stack.svg#anchor_top_icon');
+  background-image: url("../../../img/icons/stack.svg#anchor_top_icon");
   background-repeat: no-repeat;
   background-size: contain;
   transition: all 0.3s ease-in;
@@ -27,7 +27,7 @@
   &:focus,
   &:hover {
     outline: none;
-    background-image: url('../../../img/icons/stack.svg#anchor_top_icon_active');
+    background-image: url("../../../img/icons/stack.svg#anchor_top_icon_active");
   }
 }
 

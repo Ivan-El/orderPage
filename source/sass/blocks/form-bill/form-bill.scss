@@ -1,4 +1,10 @@
+.form-bill {
+  margin: 0;
+}
+
 .form-bill__row {
+  display: flex;
+  justify-content: space-between;
   margin-bottom: 12px;
 
   @media (min-width: $tablet-width) {
@@ -7,14 +13,11 @@
 }
 
 .form-bill__row--sale {
-  display: flex;
-  flex-direction: column;
-  row-gap: 8px;
+  margin-bottom: 8px;
 }
 
-.form-bill__position-wrapper {
-  display: flex;
-  justify-content: space-between;
+.form-bill__row--last {
+  margin-top: 12px;
 }
 
 .form-bill__position {

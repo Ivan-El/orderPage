@@ -25,7 +25,8 @@
         </ul>
       </nav>
       <a href="#">
-        <img class="logo" src="./img/icons/stack.svg#logo" alt="Логотип компании" width="100" height="22">
+        <img class="page-header__logo logo" src="./img/icons/stack.svg#logo" alt="Логотип компании" width="100"
+          height="22">
       </a>
       <nav class="page-header__user-navigation user-navigation">
         <ul class="user-navigation__list">
@@ -81,10 +82,11 @@
 
     <section class="page-main__order order">
       <h2 class="order__title">3 товара на сумму 25 000 <span>&#8381;</span></h2>
-      <ul class="order__wares-list">
-        <li class="order__wares-list-item">
-          <form action="#">
-            <article class="order__ware-card ware-card">
+
+      <form class="order__form order-form" action="#">
+        <ul class="order-form__wares">
+          <li class="order-form__ware">
+            <article class="ware-card">
               <a class="ware-card__image-link" href="#">
                 <img class="ware-card__image" src="./img/wares/woman_jacket_tophills_512_05.png"
                   alt="куртка черного цвета" width="90" height="111">
@@ -108,7 +110,8 @@
                   <label class="size-selection__size-radio-label" for="512-05-size-1">XS</label>
                   <input class="size-selection__size-radio visually-hidden" type="radio" name="size" id="512-05-size-2">
                   <label class="size-selection__size-radio-label" for="512-05-size-2">S</label>
-                  <input class="size-selection__size-radio visually-hidden" type="radio" name="size" id="512-05-size-3" checked>
+                  <input class="size-selection__size-radio visually-hidden" type="radio" name="size" id="512-05-size-3"
+                    checked>
                   <label class="size-selection__size-radio-label" for="512-05-size-3">M</label>
                   <input class="size-selection__size-radio visually-hidden" type="radio" name="size" id="512-05-size-4">
                   <label class="size-selection__size-radio-label" for="512-05-size-4">L</label>
@@ -117,11 +120,14 @@
                 </div>
                 <div class="ware-card__color-selection color-selection">
                   <label class="visually-hidden" for="512-05-color-1">Черный</label>
-                  <input class="color-selection__color-radio color-selection__color-radio--black" type="radio" name="color" id="512-05-color-1" checked>
+                  <input class="color-selection__color-radio color-selection__color-radio--black" type="radio"
+                    name="color" id="512-05-color-1" checked>
                   <label class="visually-hidden" for="512-05-color-2">Голубой</label>
-                  <input class="color-selection__color-radio  color-selection__color-radio--blue" type="radio" name="color" id="512-05-color-2">
+                  <input class="color-selection__color-radio  color-selection__color-radio--blue" type="radio"
+                    name="color" id="512-05-color-2">
                   <label class="visually-hidden" for="512-05-color-3">Бежевый</label>
-                  <input checked class="color-selection__color-radio  color-selection__color-radio--brown" type="radio" name="color" id="512-05-color-3">
+                  <input class="color-selection__color-radio  color-selection__color-radio--brown" type="radio"
+                    name="color" id="512-05-color-3">
                 </div>
               </div>
               <div class="ware-card__count-selection count-selection">
@@ -129,7 +135,6 @@
                   <span class="count-selection__old-price">12 000 <span>&#8381;</span></span>
                   <span class="count-selection__price">10 000 <span>&#8381;</span></span>
                 </div>
-
                 <div class="count-selection__count-wrapper">
                   <button class="count-selection__count-button count-selection__count-button--minus" type="button">
                     <span class="visually-hidden">Убавить количетво товара</span>
@@ -139,7 +144,6 @@
                     <span class="visually-hidden">Прибавить количетво товара</span>
                   </button>
                 </div>
-
                 <div class="count-selection__price-wrapper">
                   <span class="count-selection__final-old-price">24 000 <span>&#8381;</span></span>
                   <span class="count-selection__final-price">20 000 <span>&#8381;</span></span>
@@ -149,77 +153,23 @@
                 <span class="visually-hidden">Убрать товар</span>
               </button>
             </article>
-          </form>
-        </li>
-
-        <li class="order__wares-list-item">
-          <form action="#">
-            <article class="order__ware-card ware-card">
-              <a class="ware-card__image-link" href="#">
-                <img class="ware-card__image" src="./img/wares/mock_90x111.png" alt="mock"
-                  width="90" height="111">
-              </a>
-              <h3 class="ware-card__title">
-                <a class="ware-card__link" href="#">Наименование товара</a>
-              </h3>
-              <div class="ware-card__characteristics-wrapper">
-                <dl class="ware-card__characteristics characteristics">
-                  <div class="characteristics__row">
-                    <dt class="characteristics__term">Артикул</dt>
-                    <dd class="characteristics__desc">mock</dd>
-                  </div>
-                  <div class="characteristics__row">
-                    <dt class="characteristics__term">Сезон</dt>
-                    <dd class="characteristics__desc">mock</dd>
-                  </div>
-                </dl>
-                <div class="ware-card__size-selection size-selection">
-                  <input class="size-selection__size-radio visually-hidden" type="radio" name="size" id="mock-size-1">
-                  <label class="size-selection__size-radio-label" for="mock-size-1">XS</label>
-                  <input class="size-selection__size-radio visually-hidden" type="radio" name="size" id="mock-size-2">
-                  <label class="size-selection__size-radio-label" for="mock-size-2">S</label>
-                  <input class="size-selection__size-radio visually-hidden" type="radio" name="size" id="mock-size-3" checked>
-                  <label class="size-selection__size-radio-label" for="mock-size-3">M</label>
-                  <input class="size-selection__size-radio visually-hidden" type="radio" name="size" id="mock-size-4" disabled>
-                  <label class="size-selection__size-radio-label" for="mock-size-4">L</label>
-                  <input class="size-selection__size-radio visually-hidden" type="radio" name="size" id="mock-size-5" disabled>
-                  <label class="size-selection__size-radio-label" for="mock-size-5">XL</label>
-                </div>
-                <div class="ware-card__color-selection color-selection">
-                  <label class="visually-hidden" for="mock-color_1">mock</label>
-                  <input class="color-selection__color-radio color-selection__color-radio--black" type="radio" name="color" id="mock-color_1" checked>
-                </div>
+          </li>
+          <li class="order-form__ware">
+            <article class="ware-card js-delete-ware">
+              <div class="ware-card__delete-item-template">
+                <h3 class="visually-hidden">Удаленный товар</h3>
+                <span class="ware-card__delete-item-annotation">Товар <span
+                    class="ware-card__delete-item-name js-delete-item-name">Наименование товара</span> был удален из
+                  корзины.</span>
+                <a class="ware-card__delete-item-recover-link" href="#">Восстановить</a>
+                <button class="ware-card__delete-button" type="button">
+                  <span class="visually-hidden">Убрать товар</span>
+                </button>
               </div>
-
-
-              <div class="ware-card__count-selection count-selection">
-                <div class="count-selection__price-wrapper">
-                  <span class="count-selection__price">mock <span>&#8381;</span></span>
-                </div>
-                <div class="count-selection__count-wrapper">
-                  <button class="count-selection__count-button count-selection__count-button--minus" type="button" disabled>
-                    <span class="visually-hidden">Убавить количетво товара</span>
-                  </button>
-                  <span class="count-selection__count">1</span>
-                  <button class="count-selection__count-button count-selection__count-button--plus" type="button">
-                    <span class="visually-hidden">Прибавить количетво товара</span>
-                  </button>
-                </div>
-                <div class="count-selection__price-wrapper">
-                  <span class="count-selection__final-price">mock <span>&#8381;</span></span>
-                </div>
-              </div>
-              <button class="ware-card__delete-button" type="button">
-                <span class="visually-hidden">Убрать товар</span>
-              </button>
             </article>
-          </form>
-        </li>
-
-
-        <li class="order__wares-list-item">
-          <form action="#">
-            <article class="order__ware-card ware-card">
+          </li>
+          <li class="order-form__ware">
+            <article class="ware-card">
               <a class="ware-card__image-link" href="#">
                 <img class="ware-card__image" src="./img/wares/woman_hat_zolla_891_256.png" alt="шапка черного цвета"
                   width="90" height="111">
@@ -239,30 +189,35 @@
                   </div>
                 </dl>
                 <div class="ware-card__size-selection size-selection">
-                  <input class="size-selection__size-radio visually-hidden" type="radio" name="size" id="891-256-size-1">
+                  <input class="size-selection__size-radio visually-hidden" type="radio" name="size"
+                    id="891-256-size-1">
                   <label class="size-selection__size-radio-label" for="891-256-size-1">XS</label>
-                  <input class="size-selection__size-radio visually-hidden" type="radio" name="size" id="891-256-size-2">
+                  <input class="size-selection__size-radio visually-hidden" type="radio" name="size"
+                    id="891-256-size-2">
                   <label class="size-selection__size-radio-label" for="891-256-size-2">S</label>
-                  <input class="size-selection__size-radio visually-hidden" type="radio" name="size" id="891-256-size-3" checked>
+                  <input class="size-selection__size-radio visually-hidden" type="radio" name="size" id="891-256-size-3"
+                    checked>
                   <label class="size-selection__size-radio-label" for="891-256-size-3">M</label>
-                  <input class="size-selection__size-radio visually-hidden" type="radio" name="size" id="891-256-size-4" disabled>
+                  <input class="size-selection__size-radio visually-hidden" type="radio" name="size" id="891-256-size-4"
+                    disabled>
                   <label class="size-selection__size-radio-label" for="891-256-size-4">L</label>
-                  <input class="size-selection__size-radio visually-hidden" type="radio" name="size" id="891-256-size-5" disabled>
+                  <input class="size-selection__size-radio visually-hidden" type="radio" name="size" id="891-256-size-5"
+                    disabled>
                   <label class="size-selection__size-radio-label" for="891-256-size-5">XL</label>
                 </div>
                 <div class="ware-card__color-selection color-selection">
                   <label class="visually-hidden" for="891-256-color_1">Черный</label>
-                  <input class="color-selection__color-radio color-selection__color-radio--black" type="radio" name="color" id="891-256-color_1" checked>
+                  <input class="color-selection__color-radio color-selection__color-radio--black" type="radio"
+                    name="color" id="891-256-color_1" checked>
                 </div>
               </div>
-
-
               <div class="ware-card__count-selection count-selection">
                 <div class="count-selection__price-wrapper">
                   <span class="count-selection__price">500 <span>&#8381;</span></span>
                 </div>
                 <div class="count-selection__count-wrapper">
-                  <button class="count-selection__count-button count-selection__count-button--minus" type="button" disabled>
+                  <button class="count-selection__count-button count-selection__count-button--minus" type="button"
+                    disabled>
                     <span class="visually-hidden">Убавить количетво товара</span>
                   </button>
                   <span class="count-selection__count">1</span>
@@ -278,10 +233,8 @@
                 <span class="visually-hidden">Убрать товар</span>
               </button>
             </article>
-          </form>
-        </li>
-      </ul>
-      <form class="order__form order-form" action="#">
+          </li>
+        </ul>
 
         <fieldset class="order-form__fieldset order-form__fieldset--contacts">
           <legend class="order-form__legend">Контактные данные</legend>
@@ -298,7 +251,8 @@
             <input class="order-form__text-input" type="email" placeholder="Email">
           </div>
           <div class="order-form__text-input-wrapper">
-            <input class="order-form__text-input" type="text" placeholder="Адрес доставки">
+            <textarea class="order-form__text-input"
+              placeholder="г. Санкт-Петербург, пр. Просвещения, д. 99, кв. 152"></textarea>
           </div>
         </fieldset>
 
@@ -306,51 +260,49 @@
 
         <fieldset class="order-form__fieldset order-form__fieldset--payment">
           <legend class="order-form__legend">Оплата</legend>
-          <div class="order-form__payment-radio-wrapper">
-            <input class="order-form__payment-radio" type="radio" name="payment-method" id="payment-cash" checked>
-            <label class="order-form__payment-radio-label" for="payment-cash">Наличными курьеру</label>
-          </div>
-          <div class="order-form__payment-radio-wrapper">
-            <input class="order-form__payment-radio" type="radio" name="payment-method" id="payment-card">
-            <label class="order-form__payment-radio-label" for="payment-card">Картой курьеру</label>
-          </div>
-          <div class="order-form__payment-radio-wrapper">
-            <input class="order-form__payment-radio" type="radio" name="payment-method" id="payment-online">
-            <label class="order-form__payment-radio-label" for="payment-online">Картой онлайн</label>
+          <div class="form-radio">
+            <div class="form-radio__radio-wrapper">
+              <input class="form-radio__radio" type="radio" name="payment-method" id="payment-cash" checked>
+              <label class="form-radio__radio-label" for="payment-cash">Наличными курьеру</label>
+            </div>
+            <div class="form-radio__radio-wrapper">
+              <input class="form-radio__radio" type="radio" name="payment-method" id="payment-card">
+              <label class="form-radio__radio-label" for="payment-card">Картой курьеру</label>
+            </div>
+            <div class="form-radio__radio-wrapper">
+              <input class="form-radio__radio" type="radio" name="payment-method" id="payment-online">
+              <label class="form-radio__radio-label" for="payment-online">Картой онлайн</label>
+            </div>
           </div>
         </fieldset>
         <fieldset class="order-form__fieldset order-form__fieldset--comment">
           <legend class="order-form__legend">Комментарий к заказу</legend>
-          <textarea class="order-form__textarea" placeholder="Комментарий к заказу"></textarea>
-          <span class="order-form__textarea-word-counter">Использовано 0/142 символов</span>
+          <div class="form-comment">
+            <textarea class="form-comment__input" placeholder="Комментарий к заказу"></textarea>
+            <span class="form-comment__word-counter">Использовано 0/142 символов</span>
+          </div>
         </fieldset>
         <div class="order-form__subtotal">
           <dl class="order-form__subtotal-bill form-bill">
             <div class="form-bill__row">
-              <div class="form-bill__position-wrapper">
-                <dt class="form-bill__position">Товары</dt>
-                <dd class="form-bill__position-sum">24 500 <span>&#8381;</span></dd>
-              </div>
+              <dt class="form-bill__position">Товары</dt>
+              <dd class="form-bill__position-sum">24 500 <span>&#8381;</span></dd>
             </div>
             <div class="form-bill__row form-bill__row--sale">
-              <div class="form-bill__position-wrapper">
-                <dt class="form-bill__position">Скидка</dt>
-                <dd class="form-bill__position-sum">- 4 500 <span>&#8381;</span></dd>
-              </div>
-              <div class="form-bill__position-wrapper">
-                <dt class="form-bill__sale-position">Акции</dt>
-                <dd class="form-bill__position-sum form-bill__sale-position-sum">- 4 000 <span>&#8381;</span></dd>
-              </div>
-              <div class="form-bill__position-wrapper">
-                <dt class="form-bill__sale-position">Промокод</dt>
-                <dd class="form-bill__position-sum form-bill__sale-position-sum">- 500 <span>&#8381;</span></dd>
-              </div>
+              <dt class="form-bill__position">Скидка</dt>
+              <dd class="form-bill__position-sum">- 4 500 <span>&#8381;</span></dd>
             </div>
-            <div class="form-bill__row">
-              <div class="form-bill__position-wrapper">
-                <dt class="form-bill__position">Доставка</dt>
-                <dd class="form-bill__position-sum">200 <span>&#8381;</span></dd>
-              </div>
+            <div class="form-bill__row form-bill__row--sale">
+              <dt class="form-bill__sale-position">Акции</dt>
+              <dd class="form-bill__position-sum form-bill__sale-position-sum">- 4 000 <span>&#8381;</span></dd>
+            </div>
+            <div class="form-bill__row form-bill__row--sale">
+              <dt class="form-bill__sale-position">Промокод</dt>
+              <dd class="form-bill__position-sum form-bill__sale-position-sum">- 500 <span>&#8381;</span></dd>
+            </div>
+            <div class="form-bill__row form-bill__row--last">
+              <dt class="form-bill__position">Доставка</dt>
+              <dd class="form-bill__position-sum">200 <span>&#8381;</span></dd>
             </div>
           </dl>
           <div class="order-form__receiving form-receiving">
@@ -373,12 +325,6 @@
     </section>
   </main>
 
-
-
-
-
-
-
   <footer class="page__footer page-footer">
     <a class="page-footer__anchor-top" href="#">
       <span class="visually-hidden">Вернутся к началу страницы</span>
@@ -393,7 +339,8 @@
             <span>Подписаться</span>
           </button>
         </form>
-        <span class="subscribe__privacy-annotation privacy-annotation">Нажимая кнопку “Оформить заказ”, Вы соглашаетесь с
+        <span class="subscribe__privacy-annotation privacy-annotation">Нажимая кнопку “Оформить заказ”, Вы соглашаетесь
+          с
           <a class="privacy-annotation__link" href="#">политикой конфиденциальности.</a>
         </span>
       </section>
@@ -401,57 +348,76 @@
       <section class="page-footer__navigation footer-navigation">
         <h3 class="visually-hidden">Основные ссылки и разделы сайта</h3>
         <div class="footer-navigation__list-wrapper">
-          <ul class="footer-navigation__list">
-            <li class="footer-navigation__item">
-              <a class="footer-navigation__link" href="#">Каталог</a>
-            </li>
-            <li class="footer-navigation__item">
-              <a class="footer-navigation__link" href="#">О компании</a>
-            </li>
-            <li class="footer-navigation__item">
-              <a class="footer-navigation__link" href="#">Магазины</a>
-            </li>
-            <li class="footer-navigation__item">
-              <a class="footer-navigation__link" href="#">Новости</a>
-            </li>
-          </ul>
-          <ul class="footer-navigation__list">
-            <li class="footer-navigation__item">
-              <a class="footer-navigation__link" href="#">Оплата и доставка</a>
-            </li>
-            <li class="footer-navigation__item">
-              <a class="footer-navigation__link" href="#">Условия возврата</a>
-            </li>
-            <li class="footer-navigation__item">
-              <a class="footer-navigation__link" href="#">Бонусная система</a>
-            </li>
-            <li class="footer-navigation__item">
-              <a class="footer-navigation__link" href="#">Подарочный сертификат</a>
-            </li>
-          </ul>
-          <ul class="footer-navigation__list">
-            <li class="footer-navigation__item">
-              <a class="footer-navigation__link" href="#">Telegram</a>
-            </li>
-            <li class="footer-navigation__item">
-              <a class="footer-navigation__link" href="#">WhatsApp</a>
-            </li>
-            <li class="footer-navigation__item">
-              <a class="footer-navigation__link" href="#">Youtube</a>
-            </li>
-            <li class="footer-navigation__item">
-              <a class="footer-navigation__link" href="#">VK</a>
-            </li>
-          </ul>
+
+          <div class="js-accordion-section">
+            <button class="js-accordion-button footer-navigation__accordion-button" type="button" name="button">
+              <span>Интернет-магазин</span>
+            </button>
+            <ul class="footer-navigation__list">
+              <li class="footer-navigation__item">
+                <a class="footer-navigation__link" href="#">Каталог</a>
+              </li>
+              <li class="footer-navigation__item">
+                <a class="footer-navigation__link" href="#">О компании</a>
+              </li>
+              <li class="footer-navigation__item">
+                <a class="footer-navigation__link" href="#">Магазины</a>
+              </li>
+              <li class="footer-navigation__item">
+                <a class="footer-navigation__link" href="#">Новости</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="js-accordion-section">
+            <button class="js-accordion-button footer-navigation__accordion-button" type="button" name="button">
+              <span>Информация</span>
+            </button>
+            <ul class="footer-navigation__list">
+              <li class="footer-navigation__item">
+                <a class="footer-navigation__link" href="#">Оплата и доставка</a>
+              </li>
+              <li class="footer-navigation__item">
+                <a class="footer-navigation__link" href="#">Условия возврата</a>
+              </li>
+              <li class="footer-navigation__item">
+                <a class="footer-navigation__link" href="#">Бонусная система</a>
+              </li>
+              <li class="footer-navigation__item">
+                <a class="footer-navigation__link" href="#">Подарочный сертификат</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="js-accordion-section">
+            <button class="js-accordion-button footer-navigation__accordion-button" type="button" name="button">
+              <span>Социальные сети</span>
+            </button>
+            <ul class="footer-navigation__list">
+              <li class="footer-navigation__item">
+                <a class="footer-navigation__link" href="#">Telegram</a>
+              </li>
+              <li class="footer-navigation__item">
+                <a class="footer-navigation__link" href="#">WhatsApp</a>
+              </li>
+              <li class="footer-navigation__item">
+                <a class="footer-navigation__link" href="#">Youtube</a>
+              </li>
+              <li class="footer-navigation__item">
+                <a class="footer-navigation__link" href="#">VK</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
     </div>
 
     <div class="page-footer__bottom">
-      <span><span>&#169</span> All rights reserved</span>
+      <span><span>&#169;</span> All rights reserved</span>
       <a class="page-footer__policy-link" href="#">Публичная оферта</a>
       <a class="page-footer__policy-link" href="#">Политика конфиденциальности</a>
-      <a class="page-footer__policy-link page-footer__policy-link--developer" href="https://5corners.ru/">Сделано в студии <img class="page-footer__policy-image" src="./img/icons/stack.svg#5_corners_logo"
+      <a class="page-footer__policy-link page-footer__policy-link--developer" href="https://5corners.ru/">Сделано в
+        студии <img class="page-footer__policy-image" src="./img/icons/stack.svg#5_corners_logo"
           alt="логотип компании 5 Углов" width="21" height="21"> 5 УГЛОВ</a>
     </div>
   </footer>

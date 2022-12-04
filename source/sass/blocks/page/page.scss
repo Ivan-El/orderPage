@@ -6,17 +6,35 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 50px;
+    margin-bottom: 54px;
   }
 }
 
 .page__main {
   padding: 0 16px;
-}
 
+  @media (min-width: $tablet-width) {
+    padding: 0 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 auto;
+    padding: 0 40px;
+    width: $desktop-width;
+  }
+}
 
 .page__footer {
   margin-bottom: 40px;
   padding: 0 16px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 auto;
+    padding: 0 40px;
+    width: $desktop-width;
+  }
 }
-// outline: 1px solid red;

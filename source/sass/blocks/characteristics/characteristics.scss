@@ -5,7 +5,11 @@
 
 .characteristics__row {
   display: flex;
-  column-gap: 4px;
+  column-gap: 6px;
+}
+
+.characteristics__row:not(:last-child) {
+  margin-bottom: 6px;
 }
 
 .characteristics__term {

@@ -10,3 +10,17 @@ if (menuButton) {
     menuButton.classList.toggle("hamburger-button--open");
   });
 }
+
+// Accordion
+
+const accordionButtons = document.querySelectorAll(".js-accordion-button");
+const accordionSections = document.querySelectorAll(".js-accordion-section");
+
+function onButtonClick(evt) {
+  const section = evt.target.closest(".js-accordion-section");
+  section.classList.toggle("js-accordion-section--opened");
+}
+
+accordionButtons.forEach((accordionButton) => {
+  accordionButton.addEventListener("click", onButtonClick);
+});

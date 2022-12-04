@@ -18,7 +18,13 @@
   height: 30px;
   background-color: $base-grey-lightest;
   border-radius: 6px;
+  cursor: pointer;
   transition: all 0.3s ease-in;
+
+  &:hover,
+  &:focus {
+    background-color: $base-grey-lighter;
+  }
 }
 
 .size-selection__size-radio:checked + .size-selection__size-radio-label {

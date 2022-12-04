@@ -1,5 +1,5 @@
 .form-receiving {
-  padding: 12px 0;
+  padding: 12px 0 7px;
   border-top: 1px solid $base-grey-lighter;
   border-bottom: 1px solid $base-grey-lighter;
 }
@@ -7,7 +7,7 @@
 .form-receiving__label {
   position: relative;
   display: block;
-  padding: 0 47px 10px 0;
+  padding: 0 47px 6px 0;
 
   @media (min-width: $tablet-width) {
     padding-bottom: 7px;
@@ -47,12 +47,10 @@
   color: $base-grey;
 }
 
-
 .form-receiving__checkbox:checked + .form-receiving__label::after {
-    right: -6px;
-    background-color: $base-black;
-    border-radius: 50%;
-
+  right: -6px;
+  background-color: $base-black;
+  border-radius: 50%;
 }
 
 // @media (min-width: $tablet-width) {}

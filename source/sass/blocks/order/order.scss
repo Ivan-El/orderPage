@@ -1,5 +1,5 @@
 .order__title {
-  margin: 0 0 24px;
+  margin: 0 0 20px;
   width: 70%;
   font-weight: 400;
   font-size: 24px;
@@ -9,14 +9,4 @@
     font-size: 28px;
     line-height: 30px;
   }
-}
-
-.order__wares-list {
-  margin: 0 0 40px;
-  padding: 0;
-  list-style: none;
-}
-
-.order__wares-list-item:not(:last-child) {
-  margin-bottom: 25px;
 }
