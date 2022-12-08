@@ -7,4 +7,14 @@
 .login-offer__link {
   color: $base-black;
   text-decoration: none;
+  transition: all 0.3s ease-in;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }

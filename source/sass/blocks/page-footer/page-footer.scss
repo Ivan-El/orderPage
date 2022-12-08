@@ -1,11 +1,20 @@
 .page-footer {
-  position: relative;
-  margin-top: 70px;
-  padding-top: 20px;
+  width: 100%;
   border-top: 1px solid $base-grey-lighter;
+}
+
+.page-footer__container {
+  position: relative;
+  padding: 20px 16px;
+
+  @media (min-width: $tablet-width) {
+    padding: 30px;
+  }
 
   @media (min-width: $desktop-width) {
-    margin-top: 90px;
+    margin: 0 auto;
+    padding: 33px 40px;
+    width: $desktop-width;
   }
 }
 
@@ -29,6 +38,10 @@
     outline: none;
     background-image: url("../../../img/icons/stack.svg#anchor_top_icon_active");
   }
+
+  @media (min-width: $tablet-width) {
+    right: 40px;
+  }
 }
 
 .page-footer__top {
@@ -43,6 +56,12 @@
   margin-bottom: 20px;
 
   @media (min-width: $tablet-width) {
+    width: 50%;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 34.6%;
     margin-bottom: 0;
   }
 }
@@ -51,6 +70,16 @@
   font-size: 14px;
   line-height: 18px;
   color: $base-grey;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 80px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 103px;
+  }
 }
 
 .page-footer__policy-link {
@@ -58,6 +87,16 @@
   margin-top: 5px;
   color: inherit;
   text-decoration: none;
+  transition: all 0.3s ease-in;
+
+  &:hover,
+  &:focus {
+    color: $base-black;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   @media (min-width: $tablet-width) {
     margin-top: 0;
@@ -68,6 +107,11 @@
   display: flex;
   align-items: center;
   color: $base-black;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
 }
 
 .page-footer__policy-image {

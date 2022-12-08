@@ -2,6 +2,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media (min-width: $tablet-width) {
+    column-gap: 30px;
+  }
 }
 
 .count-selection__price-wrapper {
@@ -9,7 +13,8 @@
   flex-direction: column;
 }
 
-.count-selection__price {
+.count-selection__price,
+.count-selection__final-price {
   @media (min-width: $tablet-width) {
     font-weight: 700;
     font-size: 20px;
@@ -34,7 +39,7 @@
   border-radius: 5px;
 
   @media (min-width: $desktop-width) {
-    column-gap: 40px;
+    column-gap: 30px;
   }
 }
 

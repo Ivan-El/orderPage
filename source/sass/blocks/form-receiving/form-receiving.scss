@@ -2,6 +2,10 @@
   padding: 12px 0 7px;
   border-top: 1px solid $base-grey-lighter;
   border-bottom: 1px solid $base-grey-lighter;
+
+  @media (min-width: $tablet-width) {
+    padding: 20px 0 15px;
+  }
 }
 
 .form-receiving__label {
@@ -10,9 +14,21 @@
   padding: 0 47px 6px 0;
 
   @media (min-width: $tablet-width) {
-    padding-bottom: 7px;
+    padding-bottom: 2px;
     font-size: 20px;
     line-height: 24px;
+  }
+
+  &:hover::before,
+  &:hover::after,
+  &:focus::before,
+  &:focus::after {
+    opacity: 0.6;
+  }
+
+  &:active::before,
+  &:active::after{
+    opacity: 0.3;
   }
 
   &::before,
@@ -53,4 +69,3 @@
   border-radius: 50%;
 }
 
-// @media (min-width: $tablet-width) {}

@@ -4,10 +4,11 @@
 }
 
 .search-form__search-input {
+  display: none;
   padding: 4px 8px;
-  width: 150px;
-  border: none;
+  border: 1px solid $base-grey-lighter;
   border-radius: 4px;
+  transition: all 0.3s ease-in;
 
   &:focus {
     outline: 1px solid $base-grey;
@@ -23,6 +24,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-image: url("../../../img/icons/stack.svg#search_icon");
+  transition: all 0.3s ease-in;
 
   &:hover,
   &:focus {
@@ -41,6 +43,16 @@
   }
 }
 
-.js-search-input-hidden.search-form__search-input {
-  display: none;
+
+.js-search-form-active .search-form__search-input {
+  display: block;
+}
+
+.js-search-form-active .search-form__button {
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 20px;
+  top: 4px;
+  right: 4px;
 }

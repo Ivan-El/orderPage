@@ -18,6 +18,10 @@
 
 .form-bill__row--last {
   margin-top: 12px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 20px;
+  }
 }
 
 .form-bill__position {

@@ -24,16 +24,20 @@
           </li>
         </ul>
       </nav>
-      <a href="#">
-        <img class="page-header__logo logo" src="./img/icons/stack.svg#logo" alt="Логотип компании" width="100"
+      <a class="page-header__logo logo" href="#">
+        <img  src="./img/icons/stack.svg#logo" alt="Логотип компании" width="100"
           height="22">
       </a>
       <nav class="page-header__user-navigation user-navigation">
         <ul class="user-navigation__list">
+
+
+
+
           <li class="user-navigation__item user-navigation__item--only-desktop">
             <form class="user-navigation__search-form search-form" action="#" method="GET">
-              <input class="search-form__search-input js-search-input-hidden" type="text" name="page-header-search"
-                placeholder="Поиск">
+              <input class="search-form__search-input" type="text" name="page-header-search"
+                placeholder="Поиск..." autocomplete="off">
               <button class="search-form__button" type="submit">
                 <span class="visually-hidden">Найти</span>
               </button>
@@ -72,68 +76,74 @@
         <a class="breadcrumbs__link breadcrumbs__link--current" href="#">Оформление заказа</a>
       </li>
     </ul>
-    <div class="page-main__title-wrapper">
-      <h1 class="page-main__main-title">Оформление заказа</h1>
-      <span class="login-offer">
-        Есть аккаунт?
-        <a class="login-offer__link" href="#">Войти</a>
-      </span>
-    </div>
-
-    <section class="page-main__order order">
-      <h2 class="order__title">3 товара на сумму 25 000 <span>&#8381;</span></h2>
-
-      <form class="order__form order-form" action="#">
+    <form class="page-main__order-form order-form" action="#">
+      <div class="page-main__grid-el--wares">
+        <div class="order-form__title-wrapper">
+          <h1 class="order-form__title">Оформление заказа</h1>
+          <span class="login-offer">
+            Есть аккаунт?
+            <a class="login-offer__link" href="#">Войти</a>
+          </span>
+        </div>
+        <h2 class="order-form__order-title">
+          <span class="js-total-ware-count">3 товара</span> на сумму <span class="js-total-ware-sum">25 000</span> <span>&#8381;</span>
+        </h2>
         <ul class="order-form__wares">
           <li class="order-form__ware">
             <article class="ware-card">
-              <a class="ware-card__image-link" href="#">
-                <img class="ware-card__image" src="./img/wares/woman_jacket_tophills_512_05.png"
-                  alt="куртка черного цвета" width="90" height="111">
-              </a>
-              <h3 class="ware-card__title">
-                <a class="ware-card__link" href="#">Утепленная стеганная куртка женская Top Hills</a>
-              </h3>
-              <div class="ware-card__characteristics-wrapper">
-                <dl class="ware-card__characteristics characteristics">
-                  <div class="characteristics__row">
-                    <dt class="characteristics__term">Артикул</dt>
-                    <dd class="characteristics__desc">512-05</dd>
+              <div class="ware-card__grid-el--info ware-card__grid-info">
+                <a class="ware-card__grid-info-el--image ware-card__image-link" href="#">
+                  <img class="ware-card__image" src="./img/wares/woman_jacket_tophills_512_05.png"
+                    alt="куртка черного цвета" width="90" height="111">
+                </a>
+                <h3 class="ware-card__title">
+                  <a class="ware-card__link js-ware-name" href="#">Утепленная стеганная куртка женская Top Hills</a>
+                </h3>
+                <div class="ware-card__grid-info-el--charestics ware-card__characteristics-wrapper">
+                  <dl class="ware-card__characteristics characteristics">
+                    <div class="characteristics__row">
+                      <dt class="characteristics__term">Артикул</dt>
+                      <dd class="characteristics__desc">512-05</dd>
+                    </div>
+                    <div class="characteristics__row">
+                      <dt class="characteristics__term">Сезон</dt>
+                      <dd class="characteristics__desc">Осень-зима</dd>
+                    </div>
+                  </dl>
+                  <div class="ware-card__size-selection size-selection">
+                    <input class="size-selection__size-radio visually-hidden" type="radio" name="size-1" id="512-05-size-1">
+                    <label class="size-selection__size-radio-label" for="512-05-size-1">XS</label>
+                    <input class="size-selection__size-radio visually-hidden" type="radio" name="size-1" id="512-05-size-2">
+                    <label class="size-selection__size-radio-label" for="512-05-size-2">S</label>
+                    <input class="size-selection__size-radio visually-hidden" type="radio" name="size-1" id="512-05-size-3"
+                      checked>
+                    <label class="size-selection__size-radio-label" for="512-05-size-3">M</label>
+                    <input class="size-selection__size-radio visually-hidden" type="radio" name="size-1" id="512-05-size-4">
+                    <label class="size-selection__size-radio-label" for="512-05-size-4">L</label>
+                    <input class="size-selection__size-radio visually-hidden" type="radio" name="size-1" id="512-05-size-5">
+                    <label class="size-selection__size-radio-label" for="512-05-size-5">XL</label>
                   </div>
-                  <div class="characteristics__row">
-                    <dt class="characteristics__term">Сезон</dt>
-                    <dd class="characteristics__desc">Осень-зима</dd>
+                  <div class="ware-card__color-selection color-selection">
+                    <label class="visually-hidden" for="512-05-color-1">Черный</label>
+                    <input class="color-selection__color-radio color-selection__color-radio--black" type="radio"
+                      name="color-1" id="512-05-color-1" checked>
+                    <label class="visually-hidden" for="512-05-color-2">Голубой</label>
+                    <input class="color-selection__color-radio  color-selection__color-radio--blue" type="radio"
+                      name="color-1" id="512-05-color-2">
+                    <label class="visually-hidden" for="512-05-color-3">Бежевый</label>
+                    <input class="color-selection__color-radio  color-selection__color-radio--brown" type="radio"
+                      name="color-1" id="512-05-color-3">
                   </div>
-                </dl>
-                <div class="ware-card__size-selection size-selection">
-                  <input class="size-selection__size-radio visually-hidden" type="radio" name="size" id="512-05-size-1">
-                  <label class="size-selection__size-radio-label" for="512-05-size-1">XS</label>
-                  <input class="size-selection__size-radio visually-hidden" type="radio" name="size" id="512-05-size-2">
-                  <label class="size-selection__size-radio-label" for="512-05-size-2">S</label>
-                  <input class="size-selection__size-radio visually-hidden" type="radio" name="size" id="512-05-size-3"
-                    checked>
-                  <label class="size-selection__size-radio-label" for="512-05-size-3">M</label>
-                  <input class="size-selection__size-radio visually-hidden" type="radio" name="size" id="512-05-size-4">
-                  <label class="size-selection__size-radio-label" for="512-05-size-4">L</label>
-                  <input class="size-selection__size-radio visually-hidden" type="radio" name="size" id="512-05-size-5">
-                  <label class="size-selection__size-radio-label" for="512-05-size-5">XL</label>
-                </div>
-                <div class="ware-card__color-selection color-selection">
-                  <label class="visually-hidden" for="512-05-color-1">Черный</label>
-                  <input class="color-selection__color-radio color-selection__color-radio--black" type="radio"
-                    name="color" id="512-05-color-1" checked>
-                  <label class="visually-hidden" for="512-05-color-2">Голубой</label>
-                  <input class="color-selection__color-radio  color-selection__color-radio--blue" type="radio"
-                    name="color" id="512-05-color-2">
-                  <label class="visually-hidden" for="512-05-color-3">Бежевый</label>
-                  <input class="color-selection__color-radio  color-selection__color-radio--brown" type="radio"
-                    name="color" id="512-05-color-3">
                 </div>
               </div>
               <div class="ware-card__count-selection count-selection">
                 <div class="count-selection__price-wrapper">
-                  <span class="count-selection__old-price">12 000 <span>&#8381;</span></span>
-                  <span class="count-selection__price">10 000 <span>&#8381;</span></span>
+                  <span class="count-selection__old-price">
+                    <span class="js-ware-old-price">12 000</span> <span>&#8381;</span>
+                  </span>
+                  <span class="count-selection__price">
+                    <span class="js-ware-price">10 000</span> <span>&#8381;</span>
+                  </span>
                 </div>
                 <div class="count-selection__count-wrapper">
                   <button class="count-selection__count-button count-selection__count-button--minus" type="button">
@@ -145,8 +155,12 @@
                   </button>
                 </div>
                 <div class="count-selection__price-wrapper">
-                  <span class="count-selection__final-old-price">24 000 <span>&#8381;</span></span>
-                  <span class="count-selection__final-price">20 000 <span>&#8381;</span></span>
+                  <span class="count-selection__final-old-price">
+                    <span class="js-ware-total-old-price">24 000</span> <span>&#8381;</span>
+                  </span>
+                  <span class="count-selection__final-price">
+                    <span class="js-ware-total-price">20 000</span> <span>&#8381;</span>
+                  </span>
                 </div>
               </div>
               <button class="ware-card__delete-button" type="button">
@@ -154,7 +168,8 @@
               </button>
             </article>
           </li>
-          <li class="order-form__ware">
+
+          <!-- <li class="order-form__ware">
             <article class="ware-card js-delete-ware">
               <div class="ware-card__delete-item-template">
                 <h3 class="visually-hidden">Удаленный товар</h3>
@@ -167,53 +182,58 @@
                 </button>
               </div>
             </article>
-          </li>
+          </li> -->
+
           <li class="order-form__ware">
             <article class="ware-card">
-              <a class="ware-card__image-link" href="#">
-                <img class="ware-card__image" src="./img/wares/woman_hat_zolla_891_256.png" alt="шапка черного цвета"
-                  width="90" height="111">
-              </a>
-              <h3 class="ware-card__title">
-                <a class="ware-card__link" href="#">Вязанная шапка Zolla</a>
-              </h3>
-              <div class="ware-card__characteristics-wrapper">
-                <dl class="ware-card__characteristics characteristics">
-                  <div class="characteristics__row">
-                    <dt class="characteristics__term">Артикул</dt>
-                    <dd class="characteristics__desc">891-256</dd>
+              <div class="ware-card__grid-el--info ware-card__grid-info">
+                <a class="ware-card__grid-info-el--image ware-card__image-link" href="#">
+                  <img class="ware-card__image" src="./img/wares/woman_hat_zolla_891_256.png" alt="шапка черного цвета"
+                    width="90" height="111">
+                </a>
+                <h3 class="ware-card__title">
+                  <a class="ware-card__link js-ware-name" href="#">Вязанная шапка Zolla</a>
+                </h3>
+                <div class="ware-card__grid-info-el--charestics ware-card__characteristics-wrapper">
+                  <dl class="ware-card__characteristics characteristics">
+                    <div class="characteristics__row">
+                      <dt class="characteristics__term">Артикул</dt>
+                      <dd class="characteristics__desc">891-256</dd>
+                    </div>
+                    <div class="characteristics__row">
+                      <dt class="characteristics__term">Сезон</dt>
+                      <dd class="characteristics__desc">Демисезон</dd>
+                    </div>
+                  </dl>
+                  <div class="ware-card__size-selection size-selection">
+                    <input class="size-selection__size-radio visually-hidden" type="radio" name="size-2"
+                      id="891-256-size-1">
+                    <label class="size-selection__size-radio-label" for="891-256-size-1">XS</label>
+                    <input class="size-selection__size-radio visually-hidden" type="radio" name="size-2"
+                      id="891-256-size-2">
+                    <label class="size-selection__size-radio-label" for="891-256-size-2">S</label>
+                    <input class="size-selection__size-radio visually-hidden" type="radio" name="size-2" id="891-256-size-3"
+                      checked>
+                    <label class="size-selection__size-radio-label" for="891-256-size-3">M</label>
+                    <input class="size-selection__size-radio visually-hidden" type="radio" name="size-2" id="891-256-size-4"
+                      disabled>
+                    <label class="size-selection__size-radio-label" for="891-256-size-4">L</label>
+                    <input class="size-selection__size-radio visually-hidden" type="radio" name="size-2" id="891-256-size-5"
+                      disabled>
+                    <label class="size-selection__size-radio-label" for="891-256-size-5">XL</label>
                   </div>
-                  <div class="characteristics__row">
-                    <dt class="characteristics__term">Сезон</dt>
-                    <dd class="characteristics__desc">Демисезон</dd>
+                  <div class="ware-card__color-selection color-selection">
+                    <label class="visually-hidden" for="891-256-color_1">Черный</label>
+                    <input class="color-selection__color-radio color-selection__color-radio--black" type="radio"
+                      name="color-2" id="891-256-color_1" checked>
                   </div>
-                </dl>
-                <div class="ware-card__size-selection size-selection">
-                  <input class="size-selection__size-radio visually-hidden" type="radio" name="size"
-                    id="891-256-size-1">
-                  <label class="size-selection__size-radio-label" for="891-256-size-1">XS</label>
-                  <input class="size-selection__size-radio visually-hidden" type="radio" name="size"
-                    id="891-256-size-2">
-                  <label class="size-selection__size-radio-label" for="891-256-size-2">S</label>
-                  <input class="size-selection__size-radio visually-hidden" type="radio" name="size" id="891-256-size-3"
-                    checked>
-                  <label class="size-selection__size-radio-label" for="891-256-size-3">M</label>
-                  <input class="size-selection__size-radio visually-hidden" type="radio" name="size" id="891-256-size-4"
-                    disabled>
-                  <label class="size-selection__size-radio-label" for="891-256-size-4">L</label>
-                  <input class="size-selection__size-radio visually-hidden" type="radio" name="size" id="891-256-size-5"
-                    disabled>
-                  <label class="size-selection__size-radio-label" for="891-256-size-5">XL</label>
-                </div>
-                <div class="ware-card__color-selection color-selection">
-                  <label class="visually-hidden" for="891-256-color_1">Черный</label>
-                  <input class="color-selection__color-radio color-selection__color-radio--black" type="radio"
-                    name="color" id="891-256-color_1" checked>
                 </div>
               </div>
               <div class="ware-card__count-selection count-selection">
                 <div class="count-selection__price-wrapper">
-                  <span class="count-selection__price">500 <span>&#8381;</span></span>
+                  <span class="count-selection__price">
+                    <span class="js-ware-price">500</span> <span>&#8381;</span>
+                  </span>
                 </div>
                 <div class="count-selection__count-wrapper">
                   <button class="count-selection__count-button count-selection__count-button--minus" type="button"
@@ -226,7 +246,9 @@
                   </button>
                 </div>
                 <div class="count-selection__price-wrapper">
-                  <span class="count-selection__final-price">500 <span>&#8381;</span></span>
+                  <span class="count-selection__final-price">
+                    <span class="js-ware-total-price">500</span> <span>&#8381;</span>
+                  </span>
                 </div>
               </div>
               <button class="ware-card__delete-button" type="button">
@@ -235,194 +257,216 @@
             </article>
           </li>
         </ul>
+      </div>
+      <fieldset class="page-main__grid-el--contacts order-form__fieldset order-form__fieldset--contacts">
+        <legend class="order-form__legend">Контактные данные</legend>
+        <div class="form-contacts">
+          <div class="form-contacts__input-wrapper js-active-input">
+            <input class="form-contacts__input" type="text" placeholder="Имя" required>
+          </div>
+          <div class="form-contacts__input-wrapper">
+            <input class="form-contacts__input" type="text" placeholder="Фамилия" required>
+          </div>
+          <div class="form-contacts__input-wrapper">
+            <input class="form-contacts__input" type="tel" placeholder="Телефон" required>
+          </div>
+          <div class="form-contacts__input-wrapper">
+            <input class="form-contacts__input" type="email" placeholder="Email" required>
+          </div>
+          <div class="form-contacts__input-wrapper form-contacts__input-wrapper--address">
+            <textarea class="form-contacts__input form-contacts__textarea"
+              placeholder="г. Санкт-Петербург, пр. Просвещения, д. 99, кв. 152" required></textarea>
+          </div>
+        </div>
+      </fieldset>
 
-        <fieldset class="order-form__fieldset order-form__fieldset--contacts">
-          <legend class="order-form__legend">Контактные данные</legend>
-          <div class="order-form__text-input-wrapper js-active-input">
-            <input class="order-form__text-input" type="text" placeholder="Имя">
-          </div>
-          <div class="order-form__text-input-wrapper">
-            <input class="order-form__text-input" type="text" placeholder="Фамилия">
-          </div>
-          <div class="order-form__text-input-wrapper">
-            <input class="order-form__text-input" type="tel" placeholder="Телефон">
-          </div>
-          <div class="order-form__text-input-wrapper">
-            <input class="order-form__text-input" type="email" placeholder="Email">
-          </div>
-          <div class="order-form__text-input-wrapper">
-            <textarea class="order-form__text-input"
-              placeholder="г. Санкт-Петербург, пр. Просвещения, д. 99, кв. 152"></textarea>
-          </div>
-        </fieldset>
+      <div class="page-main__grid-el--map order-form__map">Map</div>
 
-        <div class="order-form__map">Map</div>
+      <fieldset class="page-main__grid-el--pay order-form__fieldset order-form__fieldset--payment">
+        <legend class="order-form__legend">Оплата</legend>
+        <div class="form-radio">
+          <div class="form-radio__radio-wrapper">
+            <input class="form-radio__radio" type="radio" name="payment-method" id="payment-cash" checked>
+            <label class="form-radio__radio-label" for="payment-cash">Наличными курьеру</label>
+          </div>
+          <div class="form-radio__radio-wrapper">
+            <input class="form-radio__radio" type="radio" name="payment-method" id="payment-card">
+            <label class="form-radio__radio-label" for="payment-card">Картой курьеру</label>
+          </div>
+          <div class="form-radio__radio-wrapper">
+            <input class="form-radio__radio" type="radio" name="payment-method" id="payment-online">
+            <label class="form-radio__radio-label" for="payment-online">Картой онлайн</label>
+          </div>
+        </div>
+      </fieldset>
 
-        <fieldset class="order-form__fieldset order-form__fieldset--payment">
-          <legend class="order-form__legend">Оплата</legend>
-          <div class="form-radio">
-            <div class="form-radio__radio-wrapper">
-              <input class="form-radio__radio" type="radio" name="payment-method" id="payment-cash" checked>
-              <label class="form-radio__radio-label" for="payment-cash">Наличными курьеру</label>
-            </div>
-            <div class="form-radio__radio-wrapper">
-              <input class="form-radio__radio" type="radio" name="payment-method" id="payment-card">
-              <label class="form-radio__radio-label" for="payment-card">Картой курьеру</label>
-            </div>
-            <div class="form-radio__radio-wrapper">
-              <input class="form-radio__radio" type="radio" name="payment-method" id="payment-online">
-              <label class="form-radio__radio-label" for="payment-online">Картой онлайн</label>
-            </div>
-          </div>
-        </fieldset>
-        <fieldset class="order-form__fieldset order-form__fieldset--comment">
-          <legend class="order-form__legend">Комментарий к заказу</legend>
-          <div class="form-comment">
-            <textarea class="form-comment__input" placeholder="Комментарий к заказу"></textarea>
-            <span class="form-comment__word-counter">Использовано 0/142 символов</span>
-          </div>
-        </fieldset>
-        <div class="order-form__subtotal">
-          <dl class="order-form__subtotal-bill form-bill">
-            <div class="form-bill__row">
-              <dt class="form-bill__position">Товары</dt>
-              <dd class="form-bill__position-sum">24 500 <span>&#8381;</span></dd>
-            </div>
-            <div class="form-bill__row form-bill__row--sale">
-              <dt class="form-bill__position">Скидка</dt>
-              <dd class="form-bill__position-sum">- 4 500 <span>&#8381;</span></dd>
-            </div>
-            <div class="form-bill__row form-bill__row--sale">
-              <dt class="form-bill__sale-position">Акции</dt>
-              <dd class="form-bill__position-sum form-bill__sale-position-sum">- 4 000 <span>&#8381;</span></dd>
-            </div>
-            <div class="form-bill__row form-bill__row--sale">
-              <dt class="form-bill__sale-position">Промокод</dt>
-              <dd class="form-bill__position-sum form-bill__sale-position-sum">- 500 <span>&#8381;</span></dd>
-            </div>
-            <div class="form-bill__row form-bill__row--last">
-              <dt class="form-bill__position">Доставка</dt>
-              <dd class="form-bill__position-sum">200 <span>&#8381;</span></dd>
-            </div>
-          </dl>
-          <div class="order-form__receiving form-receiving">
-            <input class="visually-hidden form-receiving__checkbox" type="checkbox" id="warehouse">
-            <label class="form-receiving__label" for="warehouse">Получить товар со склада</label>
-            <span class="form-receiving__annotation">Сроки получения могут измениться</span>
-          </div>
-          <div class="order-form__total">
-            <span>Итого:</span>
-            <span>20 700 <span>&#8381;</span></span>
-          </div>
-          <input class="order-form__promocode-input" type="text" placeholder="Введите промокод">
-          <button class="button order-form__submit-button" type="submit">Оформить заказ</button>
+      <fieldset class="page-main__grid-el--comment order-form__fieldset order-form__fieldset--comment">
+        <legend class="order-form__legend">Комментарий к заказу</legend>
+        <div class="form-comment">
+          <textarea class="form-comment__input" placeholder="Комментарий к заказу"></textarea>
+          <span class="form-comment__word-counter">Использовано 0/142 символов</span>
+        </div>
+      </fieldset>
 
-          <span class="privacy-annotation">Нажимая кнопку “Оформить заказ”, Вы соглашаетесь с
-            <a class="privacy-annotation__link" href="#">политикой конфиденциальности.</a>
+      <div class="page-main__grid-el--subtotal order-form__subtotal">
+        <dl class="order-form__subtotal-bill form-bill">
+          <div class="form-bill__row">
+            <dt class="form-bill__position">Товары</dt>
+            <dd class="form-bill__position-sum">
+              <span class="js-bill-sum js-total-ware-sum">24 500</span> <span>&#8381;</span>
+            </dd>
+          </div>
+          <div class="form-bill__row form-bill__row--sale">
+            <dt class="form-bill__position">Скидка</dt>
+            <dd class="form-bill__position-sum">
+              <span class="js-bill-sum js-bill-sale-sum">- 4 000</span> <span>&#8381;</span>
+            </dd>
+          </div>
+          <div class="form-bill__row form-bill__row--sale">
+            <dt class="form-bill__sale-position">Акции</dt>
+            <dd class="form-bill__position-sum form-bill__sale-position-sum">
+              <span class="js-bill-sale">- 4 000</span> <span>&#8381;</span>
+            </dd>
+          </div>
+          <div class="form-bill__row form-bill__row--sale">
+            <dt class="form-bill__sale-position">Промокод</dt>
+            <dd class="form-bill__position-sum form-bill__sale-position-sum">
+              <span class="js-bill-sale js-promocode-value">0</span> <span>&#8381;</span>
+            </dd>
+          </div>
+          <div class="form-bill__row form-bill__row--last">
+            <dt class="form-bill__position">Доставка</dt>
+            <dd class="form-bill__position-sum">
+              <span class="js-bill-sum">200</span> <span>&#8381;</span>
+            </dd>
+          </div>
+        </dl>
+        <div class="order-form__receiving form-receiving">
+          <input class="visually-hidden form-receiving__checkbox" type="checkbox" id="warehouse">
+          <label class="form-receiving__label" for="warehouse">Получить товар со склада</label>
+          <span class="form-receiving__annotation">Сроки получения могут измениться</span>
+        </div>
+        <div class="order-form__total">
+          <span>Итого:</span>
+          <span>
+            <span class="js-bill-total">20 700</span> <span>&#8381;</span>
           </span>
         </div>
-      </form>
-    </section>
-  </main>
-
-  <footer class="page__footer page-footer">
-    <a class="page-footer__anchor-top" href="#">
-      <span class="visually-hidden">Вернутся к началу страницы</span>
-    </a>
-    <div class="page-footer__top">
-      <section class="page-footer__subscribe subscribe">
-        <h3 class="subscribe__title">Скидка 10% за подписку
-          на наши новости</h3>
-        <form class="subscribe__form" action="#">
-          <input class="subscribe__input" type="email" placeholder="example@mail.ru">
-          <button class="subscribe__submit-button" type="submit">
-            <span>Подписаться</span>
-          </button>
-        </form>
-        <span class="subscribe__privacy-annotation privacy-annotation">Нажимая кнопку “Оформить заказ”, Вы соглашаетесь
-          с
+        <div class="order-form__promocode promocode">
+          <input class="promocode__input" type="text" placeholder="Введите промокод 5UGLOV">
+          <button class="promocode__button">Применить</button>
+          <span></span>
+        </div>
+        <button class="button order-form__submit-button" type="submit">Оформить заказ</button>
+        <span class="privacy-annotation">Нажимая кнопку “Оформить заказ”, Вы соглашаетесь с
           <a class="privacy-annotation__link" href="#">политикой конфиденциальности.</a>
         </span>
-      </section>
+      </div>
+    </form>
+  </main>
+  <footer class="page__footer page-footer">
+    <div class="page-footer__container">
 
-      <section class="page-footer__navigation footer-navigation">
-        <h3 class="visually-hidden">Основные ссылки и разделы сайта</h3>
-        <div class="footer-navigation__list-wrapper">
+      <a class="page-footer__anchor-top" href="#">
+        <span class="visually-hidden">Вернутся к началу страницы</span>
+      </a>
 
-          <div class="js-accordion-section">
-            <button class="js-accordion-button footer-navigation__accordion-button" type="button" name="button">
-              <span>Интернет-магазин</span>
+      <div class="page-footer__top">
+
+        <section class="page-footer__subscribe subscribe">
+          <h3 class="subscribe__title">Скидка 10% за подписку
+            на наши новости</h3>
+          <form class="subscribe__form" action="#">
+            <input class="subscribe__input" type="email" placeholder="example@mail.ru">
+            <button class="subscribe__submit-button" type="submit">
+              <span>Подписаться</span>
             </button>
-            <ul class="footer-navigation__list">
-              <li class="footer-navigation__item">
-                <a class="footer-navigation__link" href="#">Каталог</a>
-              </li>
-              <li class="footer-navigation__item">
-                <a class="footer-navigation__link" href="#">О компании</a>
-              </li>
-              <li class="footer-navigation__item">
-                <a class="footer-navigation__link" href="#">Магазины</a>
-              </li>
-              <li class="footer-navigation__item">
-                <a class="footer-navigation__link" href="#">Новости</a>
-              </li>
-            </ul>
-          </div>
+          </form>
+          <span class="subscribe__privacy-annotation privacy-annotation">Нажимая кнопку “Оформить заказ”, Вы соглашаетесь
+            с
+            <a class="privacy-annotation__link" href="#">политикой конфиденциальности.</a>
+          </span>
+        </section>
 
-          <div class="js-accordion-section">
-            <button class="js-accordion-button footer-navigation__accordion-button" type="button" name="button">
-              <span>Информация</span>
-            </button>
-            <ul class="footer-navigation__list">
-              <li class="footer-navigation__item">
-                <a class="footer-navigation__link" href="#">Оплата и доставка</a>
-              </li>
-              <li class="footer-navigation__item">
-                <a class="footer-navigation__link" href="#">Условия возврата</a>
-              </li>
-              <li class="footer-navigation__item">
-                <a class="footer-navigation__link" href="#">Бонусная система</a>
-              </li>
-              <li class="footer-navigation__item">
-                <a class="footer-navigation__link" href="#">Подарочный сертификат</a>
-              </li>
-            </ul>
-          </div>
+        <section class="page-footer__navigation footer-navigation">
+          <h3 class="visually-hidden">Основные ссылки и разделы сайта</h3>
+          <div class="footer-navigation__list-wrapper">
 
-          <div class="js-accordion-section">
-            <button class="js-accordion-button footer-navigation__accordion-button" type="button" name="button">
-              <span>Социальные сети</span>
-            </button>
-            <ul class="footer-navigation__list">
-              <li class="footer-navigation__item">
-                <a class="footer-navigation__link" href="#">Telegram</a>
-              </li>
-              <li class="footer-navigation__item">
-                <a class="footer-navigation__link" href="#">WhatsApp</a>
-              </li>
-              <li class="footer-navigation__item">
-                <a class="footer-navigation__link" href="#">Youtube</a>
-              </li>
-              <li class="footer-navigation__item">
-                <a class="footer-navigation__link" href="#">VK</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-    </div>
+            <div class="js-accordion-section">
+              <button class="js-accordion-button footer-navigation__accordion-button" type="button" name="button">
+                <span>Интернет-магазин</span>
+              </button>
+              <ul class="footer-navigation__list">
+                <li class="footer-navigation__item">
+                  <a class="footer-navigation__link" href="#">Каталог</a>
+                </li>
+                <li class="footer-navigation__item">
+                  <a class="footer-navigation__link" href="#">О компании</a>
+                </li>
+                <li class="footer-navigation__item">
+                  <a class="footer-navigation__link" href="#">Магазины</a>
+                </li>
+                <li class="footer-navigation__item">
+                  <a class="footer-navigation__link" href="#">Новости</a>
+                </li>
+              </ul>
+            </div>
 
-    <div class="page-footer__bottom">
-      <span><span>&#169;</span> All rights reserved</span>
-      <a class="page-footer__policy-link" href="#">Публичная оферта</a>
-      <a class="page-footer__policy-link" href="#">Политика конфиденциальности</a>
-      <a class="page-footer__policy-link page-footer__policy-link--developer" href="https://5corners.ru/">Сделано в
-        студии <img class="page-footer__policy-image" src="./img/icons/stack.svg#5_corners_logo"
-          alt="логотип компании 5 Углов" width="21" height="21"> 5 УГЛОВ</a>
+            <div class="js-accordion-section">
+              <button class="js-accordion-button footer-navigation__accordion-button" type="button" name="button">
+                <span>Информация</span>
+              </button>
+              <ul class="footer-navigation__list">
+                <li class="footer-navigation__item">
+                  <a class="footer-navigation__link" href="#">Оплата и доставка</a>
+                </li>
+                <li class="footer-navigation__item">
+                  <a class="footer-navigation__link" href="#">Условия возврата</a>
+                </li>
+                <li class="footer-navigation__item">
+                  <a class="footer-navigation__link" href="#">Бонусная система</a>
+                </li>
+                <li class="footer-navigation__item">
+                  <a class="footer-navigation__link" href="#">Подарочный сертификат</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="js-accordion-section">
+              <button class="js-accordion-button footer-navigation__accordion-button" type="button" name="button">
+                <span>Социальные сети</span>
+              </button>
+              <ul class="footer-navigation__list">
+                <li class="footer-navigation__item">
+                  <a class="footer-navigation__link" href="#">Telegram</a>
+                </li>
+                <li class="footer-navigation__item">
+                  <a class="footer-navigation__link" href="#">WhatsApp</a>
+                </li>
+                <li class="footer-navigation__item">
+                  <a class="footer-navigation__link" href="#">Youtube</a>
+                </li>
+                <li class="footer-navigation__item">
+                  <a class="footer-navigation__link" href="#">VK</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="page-footer__bottom">
+        <span><span>&#169;</span> All rights reserved</span>
+        <a class="page-footer__policy-link" href="#">Публичная оферта</a>
+        <a class="page-footer__policy-link" href="#">Политика конфиденциальности</a>
+        <a class="page-footer__policy-link page-footer__policy-link--developer" href="https://5corners.ru/">Сделано в
+          студии <img class="page-footer__policy-image" src="./img/icons/stack.svg#5_corners_logo"
+            alt="логотип компании 5 Углов" width="21" height="21"> 5 УГЛОВ</a>
+      </div>
     </div>
   </footer>
 
-  <script src="./js/script.js" defer></script>
+  <script src="./js/script.js" type="module" defer></script>
 </body>
 
 </html>

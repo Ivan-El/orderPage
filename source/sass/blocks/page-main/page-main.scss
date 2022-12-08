@@ -2,31 +2,57 @@
   margin-bottom: 34px;
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 40px;
+    margin-bottom: 36px;
   }
 }
 
-.page-main__title-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: baseline;
-  gap: 10px;
-  margin-bottom: 32px;
-
-  @media (min-width: $tablet-width) {
-    flex-direction: row;
-    gap: 20px;
-  }
-}
-
-.page-main__main-title {
-  margin: 0;
-  font-weight: 400;
-  font-size: 28px;
-  line-height: 30px;
-
+.page-main__order-form {
   @media (min-width: $desktop-width) {
-    font-size: 40px;
-    line-height: 42px;
+    display: grid;
+    grid-template-columns: 760px 400px;
+    grid-template-areas:
+      "wares subtotal"
+      "contacts map"
+      "pay map"
+      "comment .";
+    column-gap: 40px;
+    align-items: start;
+  }
+}
+
+.page-main__grid-el--wares {
+  @media (min-width: $desktop-width) {
+    grid-area: wares;
+    margin-bottom: 39px;
+  }
+}
+
+.page-main__grid-el--contacts {
+  @media (min-width: $desktop-width) {
+    grid-area: contacts;
+  }
+}
+
+.page-main__grid-el--map {
+  @media (min-width: $desktop-width) {
+    grid-area: map;
+  }
+}
+
+.page-main__grid-el--pay {
+  @media (min-width: $desktop-width) {
+    grid-area: pay;
+  }
+}
+
+.page-main__grid-el--comment {
+  @media (min-width: $desktop-width) {
+    grid-area: comment;
+  }
+}
+
+.page-main__grid-el--subtotal {
+  @media (min-width: $desktop-width) {
+    grid-area: subtotal;
   }
 }
