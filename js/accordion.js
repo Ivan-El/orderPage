@@ -1,0 +1,1 @@
+const initAccordion=()=>{const o=document.querySelectorAll(".js-accordion-button");document.querySelectorAll(".js-accordion-section");function c(o){o.target.closest(".js-accordion-section").classList.toggle("js-accordion-section--opened")}o&&o.forEach((o=>{o.addEventListener("click",c)}))};export default initAccordion;

@@ -1,0 +1,1 @@
+const initMobileMenu=()=>{const e=document.querySelector(".hamburger-button");e&&e.addEventListener("click",(()=>{document.body.classList.toggle("js-menu-open"),e.classList.toggle("hamburger-button--open")}))};export default initMobileMenu;
