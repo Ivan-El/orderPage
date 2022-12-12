@@ -63,10 +63,10 @@
 }
 
 .order-form__fieldset--contacts {
-  margin-bottom: 12px;
+  margin-bottom: 16px;
 
   @media (min-width: $tablet-width) {
-    margin: 4px 0 40px;
+    margin: 4px 0 44px;
   }
 }
 
@@ -95,6 +95,10 @@
   width: 100%;
   height: 220px;
   background-color: $base-grey-lightest;
+
+  @media (min-width: $desktop-width) {
+    height: 450px;
+  }
 }
 
 .order-form__subtotal {
@@ -156,5 +160,39 @@
 
   @media (min-width: $tablet-width) {
     margin-bottom: 13px;
+  }
+}
+
+.js-form-success-submit-message {
+  position: fixed;
+  content: "";
+  z-index: 10;
+  top: 30%;
+  left: 50%;
+  display: block;
+  width: 80%;
+  padding: 60px 20px 40px;
+  color: $success-color;
+  text-align: center;
+  background-color: $base-white;
+  border: 1px solid $base-black;
+  border-top-width: 10px;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease-in;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 10px;
+    display: block;
+    left: calc(50% - 20px);
+    width: 40px;
+    height: 40px;
+    background-image: url("../../../img/icons/stack.svg#success_icon");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 24px;
+    border-radius: 50%;
+    border: 2px solid $success-color;
   }
 }

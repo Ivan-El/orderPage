@@ -1,14 +1,15 @@
 import initAccordion from "./accordion.js";
-import { initForm, refreshValue } from "./form.js";
+import initForm from "./form.js";
 import initMobileMenu from "./hamburger.js";
-import { initPromocode } from "./promocode.js";
+import { initMap } from "./map.js";
 import initSiteSearch from "./search.js";
+import initSubscribe from "./subscribe.js";
 
 document.body.classList.remove("js-no");
 
 initMobileMenu();
 initSiteSearch();
-initAccordion();
-refreshValue();
 initForm();
-initPromocode();
+ymaps.ready(initMap);
+initSubscribe();
+initAccordion();

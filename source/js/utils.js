@@ -34,4 +34,24 @@ const calculate = (
   }
 };
 
-export { chooseDeclination, replaceTextContentNumber, calculate };
+const isLengthValid = (string, maxLength) => {
+  if (typeof string === "string") {
+    return string.length <= maxLength;
+  }
+};
+
+const showSuccessMessage = () => {
+  const message  = document.createElement("div");
+  message.className = "js-form-success-submit-message";
+  message.innerHTML =`<span class="js-form-success-submit-span">Заказ успешно оформлен!</span>`;
+  document.body.append(message);
+  setTimeout(() => message.remove(), 2000);
+};
+
+export {
+  chooseDeclination,
+  replaceTextContentNumber,
+  calculate,
+  isLengthValid,
+  showSuccessMessage
+};

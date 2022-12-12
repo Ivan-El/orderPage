@@ -67,3 +67,32 @@
 .user-navigation__link--profile {
   background-image: url("../../../img/icons/stack.svg#profile_icon");
 }
+
+.user-navigation__link--counter {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: attr(data-count);
+    top: 0;
+    right: -4px;
+    width: 15px;
+    height: 15px;
+    font-size: 8px;
+    line-height: 15px;
+    color: $base-white;
+    text-align: center;
+    background-color: $base-black;
+    border-radius: 50%;
+
+    @media (min-width: $tablet-width) {
+      top: 11px;
+      right: 8px;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: -3px;
+      right: -8px;
+    }
+  }
+}

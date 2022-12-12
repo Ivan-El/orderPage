@@ -6,6 +6,14 @@
   <title>orderPage</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=535c91ae-165e-4e08-a69d-e9d7218163c8&lang=ru_RU">
+  </script>
+  <link rel="preload" href="fonts/helvetica-regular.woff" as="font" crossorigin>
+  <link rel="preload" href="fonts/helvetica-regular.woff2" as="font" crossorigin>
+  <link rel="preload" href="fonts/helvetica-bold.woff" as="font" crossorigin>
+  <link rel="preload" href="fonts/helvetica-bold.woff2" as="font" crossorigin>
 </head>
 
 <body class="js-no">
@@ -25,19 +33,14 @@
         </ul>
       </nav>
       <a class="page-header__logo logo" href="#">
-        <img  src="./img/icons/stack.svg#logo" alt="Логотип компании" width="100"
-          height="22">
+        <img src="./img/icons/stack.svg#logo" alt="Логотип компании" width="100" height="22">
       </a>
       <nav class="page-header__user-navigation user-navigation">
         <ul class="user-navigation__list">
-
-
-
-
           <li class="user-navigation__item user-navigation__item--only-desktop">
             <form class="user-navigation__search-form search-form" action="#" method="GET">
-              <input class="search-form__search-input" type="text" name="page-header-search"
-                placeholder="Поиск..." autocomplete="off">
+              <input class="search-form__search-input" type="text" name="page-header-search" placeholder="Поиск..."
+                autocomplete="off">
               <button class="search-form__button" type="submit">
                 <span class="visually-hidden">Найти</span>
               </button>
@@ -49,12 +52,14 @@
             </a>
           </li>
           <li class="user-navigation__item user-navigation__item--only-desktop">
-            <a class="user-navigation__link user-navigation__link--favorites" href="#">
+            <a class="user-navigation__link user-navigation__link--favorites user-navigation__link--counter js-favorites-count"
+              href="#" data-count="0">
               <span class="visually-hidden">Избранное</span>
             </a>
           </li>
           <li class="user-navigation__item">
-            <a class="user-navigation__link user-navigation__link--cart" href="#">
+            <a class="user-navigation__link user-navigation__link--cart user-navigation__link--counter js-cart-count"
+              href="#" data-count="0">
               <span class="visually-hidden">Корзина</span>
             </a>
           </li>
@@ -66,7 +71,6 @@
       </button>
     </div>
   </header>
-
   <main class="page__main page-main">
     <ul class="page-main__breadcrumbs breadcrumbs">
       <li class="breadcrumbs__item">
@@ -76,8 +80,8 @@
         <a class="breadcrumbs__link breadcrumbs__link--current" href="#">Оформление заказа</a>
       </li>
     </ul>
-    <form class="page-main__order-form order-form" action="#">
-      <div class="page-main__grid-el--wares">
+    <form class="page-main__order-form order-form" action="https://echo.htmlacademy.ru" method="GET" target="_blank">
+      <div class="page-main__grid-el page-main__grid-el--wares">
         <div class="order-form__title-wrapper">
           <h1 class="order-form__title">Оформление заказа</h1>
           <span class="login-offer">
@@ -86,24 +90,32 @@
           </span>
         </div>
         <h2 class="order-form__order-title">
-          <span class="js-total-ware-count">3 товара</span> на сумму <span class="js-total-ware-sum">25 000</span> <span>&#8381;</span>
+          <span class="js-total-ware-count">3 товара</span> на сумму <span class="js-total-ware-sum">25 000</span>
+          <span>&#8381;</span>
         </h2>
         <ul class="order-form__wares">
           <li class="order-form__ware">
             <article class="ware-card">
-              <div class="ware-card__grid-el--info ware-card__grid-info">
-                <a class="ware-card__grid-info-el--image ware-card__image-link" href="#">
-                  <img class="ware-card__image" src="./img/wares/woman_jacket_tophills_512_05.png"
-                    alt="куртка черного цвета" width="90" height="111">
+              <div class=" ware-card__grid-info">
+                <a class="ware-card__grid-info-el ware-card__grid-info-el--image ware-card__image-link" href="#">
+                  <picture>
+                    <source
+                      srcset="./img/wares/woman_jacket_tophills_512_05.webp 1x, ./img/wares/woman_jacket_tophills_512_05@2x.webp 2x"
+                      type="image/webp">
+                    <img class="ware-card__image" src="./img/wares/woman_jacket_tophills_512_05.png"
+                      srcset="./img/wares/woman_jacket_tophills_512_05@2x.png 2x" alt="куртка черного цвета" width="90"
+                      height="111">
+                  </picture>
                 </a>
                 <h3 class="ware-card__title">
                   <a class="ware-card__link js-ware-name" href="#">Утепленная стеганная куртка женская Top Hills</a>
                 </h3>
-                <div class="ware-card__grid-info-el--charestics ware-card__characteristics-wrapper">
+                <div
+                  class="ware-card__grid-info-el ware-card__grid-info-el--charestics ware-card__characteristics-wrapper">
                   <dl class="ware-card__characteristics characteristics">
                     <div class="characteristics__row">
                       <dt class="characteristics__term">Артикул</dt>
-                      <dd class="characteristics__desc">512-05</dd>
+                      <dd class="characteristics__desc js-ware-article">512-05</dd>
                     </div>
                     <div class="characteristics__row">
                       <dt class="characteristics__term">Сезон</dt>
@@ -111,28 +123,32 @@
                     </div>
                   </dl>
                   <div class="ware-card__size-selection size-selection">
-                    <input class="size-selection__size-radio visually-hidden" type="radio" name="size-1" id="512-05-size-1">
+                    <input class="size-selection__size-radio visually-hidden" type="radio" name="512-05-size"
+                      id="512-05-size-1" value="xs">
                     <label class="size-selection__size-radio-label" for="512-05-size-1">XS</label>
-                    <input class="size-selection__size-radio visually-hidden" type="radio" name="size-1" id="512-05-size-2">
+                    <input class="size-selection__size-radio visually-hidden" type="radio" name="512-05-size"
+                      id="512-05-size-2" value="s">
                     <label class="size-selection__size-radio-label" for="512-05-size-2">S</label>
-                    <input class="size-selection__size-radio visually-hidden" type="radio" name="size-1" id="512-05-size-3"
-                      checked>
+                    <input class="size-selection__size-radio visually-hidden" type="radio" name="512-05-size"
+                      id="512-05-size-3" checked value="m">
                     <label class="size-selection__size-radio-label" for="512-05-size-3">M</label>
-                    <input class="size-selection__size-radio visually-hidden" type="radio" name="size-1" id="512-05-size-4">
+                    <input class="size-selection__size-radio visually-hidden" type="radio" name="512-05-size"
+                      id="512-05-size-4" value="l">
                     <label class="size-selection__size-radio-label" for="512-05-size-4">L</label>
-                    <input class="size-selection__size-radio visually-hidden" type="radio" name="size-1" id="512-05-size-5">
+                    <input class="size-selection__size-radio visually-hidden" type="radio" name="512-05-size"
+                      id="512-05-size-5" value="xl">
                     <label class="size-selection__size-radio-label" for="512-05-size-5">XL</label>
                   </div>
                   <div class="ware-card__color-selection color-selection">
                     <label class="visually-hidden" for="512-05-color-1">Черный</label>
                     <input class="color-selection__color-radio color-selection__color-radio--black" type="radio"
-                      name="color-1" id="512-05-color-1" checked>
+                      name="512-05-color" value="black" id="512-05-color-1" checked>
                     <label class="visually-hidden" for="512-05-color-2">Голубой</label>
                     <input class="color-selection__color-radio  color-selection__color-radio--blue" type="radio"
-                      name="color-1" id="512-05-color-2">
+                      name="512-05-color" value="blue" id="512-05-color-2">
                     <label class="visually-hidden" for="512-05-color-3">Бежевый</label>
                     <input class="color-selection__color-radio  color-selection__color-radio--brown" type="radio"
-                      name="color-1" id="512-05-color-3">
+                      name="512-05-color" value="brown" id="512-05-color-3">
                   </div>
                 </div>
               </div>
@@ -163,42 +179,114 @@
                   </span>
                 </div>
               </div>
-              <button class="ware-card__delete-button" type="button">
+              <button class="ware-card__delete-button js-delete-button " type="button">
                 <span class="visually-hidden">Убрать товар</span>
               </button>
+              <input data-input="price" type="hidden" name="512-05-price" value="">
+              <input data-input="count" type="hidden" name="512-05-count" value="">
+              <input data-input="sum" type="hidden" name="512-05-sum" value="">
             </article>
           </li>
-
-          <!-- <li class="order-form__ware">
-            <article class="ware-card js-delete-ware">
-              <div class="ware-card__delete-item-template">
-                <h3 class="visually-hidden">Удаленный товар</h3>
-                <span class="ware-card__delete-item-annotation">Товар <span
-                    class="ware-card__delete-item-name js-delete-item-name">Наименование товара</span> был удален из
-                  корзины.</span>
-                <a class="ware-card__delete-item-recover-link" href="#">Восстановить</a>
-                <button class="ware-card__delete-button" type="button">
-                  <span class="visually-hidden">Убрать товар</span>
-                </button>
-              </div>
-            </article>
-          </li> -->
-
           <li class="order-form__ware">
             <article class="ware-card">
-              <div class="ware-card__grid-el--info ware-card__grid-info">
-                <a class="ware-card__grid-info-el--image ware-card__image-link" href="#">
-                  <img class="ware-card__image" src="./img/wares/woman_hat_zolla_891_256.png" alt="шапка черного цвета"
-                    width="90" height="111">
+              <div class="ware-card__grid-info">
+                <a class="ware-card__grid-info-el ware-card__grid-info-el--image ware-card__image-link" href="#">
+                  <picture>
+                    <source srcset="./img/wares/mock_90x111.webp" type="image/webp">
+                    <img class="ware-card__image" src="./img/wares/mock_90x111.png" alt="mock" width="90" height="111">
+                  </picture>
+                </a>
+                <h3 class="ware-card__title">
+                  <a class="ware-card__link js-ware-name" href="#">Наименование товара</a>
+                </h3>
+                <div
+                  class="ware-card__grid-info-el ware-card__grid-info-el--charestics ware-card__characteristics-wrapper">
+                  <dl class="ware-card__characteristics characteristics">
+                    <div class="characteristics__row">
+                      <dt class="characteristics__term">Артикул</dt>
+                      <dd class="characteristics__desc js-ware-article">000</dd>
+                    </div>
+                    <div class="characteristics__row">
+                      <dt class="characteristics__term">Параметр</dt>
+                      <dd class="characteristics__desc">Значение</dd>
+                    </div>
+                  </dl>
+                  <div class="ware-card__size-selection size-selection">
+                    <input class="size-selection__size-radio visually-hidden" type="radio" name="000-size" value="xs"
+                      id="000-size-1">
+                    <label class="size-selection__size-radio-label" for="000-size-1">XS</label>
+                    <input class="size-selection__size-radio visually-hidden" type="radio" name="000-size" value="s"
+                      id="000-size-2">
+                    <label class="size-selection__size-radio-label" for="000-size-2">S</label>
+                    <input class="size-selection__size-radio visually-hidden" type="radio" name="000-size" value="m"
+                      id="000-size-3" checked>
+                    <label class="size-selection__size-radio-label" for="000-size-3">M</label>
+                    <input class="size-selection__size-radio visually-hidden" type="radio" name="000-size" value="l"
+                      id="000-size-4" disabled>
+                    <label class="size-selection__size-radio-label" for="000-size-4">L</label>
+                    <input class="size-selection__size-radio visually-hidden" type="radio" name="000-size" value="xl"
+                      id="000-size-5" disabled>
+                    <label class="size-selection__size-radio-label" for="000-size-5">XL</label>
+                  </div>
+                  <div class="ware-card__color-selection color-selection">
+                    <label class="visually-hidden" for="000-color_1">Голубой</label>
+                    <input class="color-selection__color-radio color-selection__color-radio--blue" type="radio"
+                      name="000-color" value="blue" id="000-color_1" checked>
+                  </div>
+                </div>
+              </div>
+              <div class="ware-card__count-selection count-selection">
+                <div class="count-selection__price-wrapper">
+                  <span class="count-selection__price">
+                    <span class="js-ware-price">100</span> <span>&#8381;</span>
+                  </span>
+                </div>
+                <div class="count-selection__count-wrapper">
+                  <button class="count-selection__count-button count-selection__count-button--minus" type="button"
+                    disabled>
+                    <span class="visually-hidden">Убавить количетво товара</span>
+                  </button>
+                  <span class="count-selection__count">1</span>
+                  <button class="count-selection__count-button count-selection__count-button--plus" type="button">
+                    <span class="visually-hidden">Прибавить количетво товара</span>
+                  </button>
+                </div>
+                <div class="count-selection__price-wrapper">
+                  <span class="count-selection__final-price">
+                    <span class="js-ware-total-price">100</span> <span>&#8381;</span>
+                  </span>
+                </div>
+              </div>
+              <button class="ware-card__delete-button js-delete-button " type="button">
+                <span class="visually-hidden">Убрать товар</span>
+              </button>
+              <input data-input="price" type="hidden" name="000-price" value="">
+              <input data-input="count" type="hidden" name="000-count" value="">
+              <input data-input="sum" type="hidden" name="000-sum" value="">
+            </article>
+          </li>
+          <li class="order-form__ware">
+            <article class="ware-card">
+              <div class="ware-card__grid-info">
+                <a class="ware-card__grid-info-el ware-card__grid-info-el--image ware-card__image-link" href="#">
+                  <picture>
+                    <source
+                      srcset="/img/wares/woman_hat_zolla_891_256.webp 1x, /img/wares/woman_hat_zolla_891_256@2x.webp 2x"
+                      type="image/webp">
+                    <img class="ware-card__image" src="./img/wares/woman_hat_zolla_891_256.png"
+                      srcset="./img/wares/woman_hat_zolla_891_256@2x.png 2x" alt="шапка черного цвета" width="90"
+                      height="111">
+                  </picture>
                 </a>
                 <h3 class="ware-card__title">
                   <a class="ware-card__link js-ware-name" href="#">Вязанная шапка Zolla</a>
                 </h3>
-                <div class="ware-card__grid-info-el--charestics ware-card__characteristics-wrapper">
+                <div
+                  class="ware-card__grid-info-el ware-card__grid-info-el--charestics ware-card__characteristics-wrapper">
                   <dl class="ware-card__characteristics characteristics">
                     <div class="characteristics__row">
                       <dt class="characteristics__term">Артикул</dt>
-                      <dd class="characteristics__desc">891-256</dd>
+                      <dd class="characteristics__desc js-ware-article">891-256</dd>
                     </div>
                     <div class="characteristics__row">
                       <dt class="characteristics__term">Сезон</dt>
@@ -206,26 +294,26 @@
                     </div>
                   </dl>
                   <div class="ware-card__size-selection size-selection">
-                    <input class="size-selection__size-radio visually-hidden" type="radio" name="size-2"
-                      id="891-256-size-1">
+                    <input class="size-selection__size-radio visually-hidden" type="radio" name="891-256-size"
+                      value="xs" id="891-256-size-1">
                     <label class="size-selection__size-radio-label" for="891-256-size-1">XS</label>
-                    <input class="size-selection__size-radio visually-hidden" type="radio" name="size-2"
+                    <input class="size-selection__size-radio visually-hidden" type="radio" name="891-256-size" value="s"
                       id="891-256-size-2">
                     <label class="size-selection__size-radio-label" for="891-256-size-2">S</label>
-                    <input class="size-selection__size-radio visually-hidden" type="radio" name="size-2" id="891-256-size-3"
-                      checked>
+                    <input class="size-selection__size-radio visually-hidden" type="radio" name="891-256-size" value="m"
+                      id="891-256-size-3" checked>
                     <label class="size-selection__size-radio-label" for="891-256-size-3">M</label>
-                    <input class="size-selection__size-radio visually-hidden" type="radio" name="size-2" id="891-256-size-4"
-                      disabled>
+                    <input class="size-selection__size-radio visually-hidden" type="radio" name="891-256-size" value="l"
+                      id="891-256-size-4" disabled>
                     <label class="size-selection__size-radio-label" for="891-256-size-4">L</label>
-                    <input class="size-selection__size-radio visually-hidden" type="radio" name="size-2" id="891-256-size-5"
-                      disabled>
+                    <input class="size-selection__size-radio visually-hidden" type="radio" name="891-256-size"
+                      value="xl" id="891-256-size-5" disabled>
                     <label class="size-selection__size-radio-label" for="891-256-size-5">XL</label>
                   </div>
                   <div class="ware-card__color-selection color-selection">
                     <label class="visually-hidden" for="891-256-color_1">Черный</label>
                     <input class="color-selection__color-radio color-selection__color-radio--black" type="radio"
-                      name="color-2" id="891-256-color_1" checked>
+                      name="891-256-color" value="black" id="891-256-color_1" checked>
                   </div>
                 </div>
               </div>
@@ -251,64 +339,79 @@
                   </span>
                 </div>
               </div>
-              <button class="ware-card__delete-button" type="button">
+              <button class="ware-card__delete-button js-delete-button " type="button">
                 <span class="visually-hidden">Убрать товар</span>
               </button>
+              <input data-input="price" type="hidden" name="891-256-price" value="">
+              <input data-input="count" type="hidden" name="891-256-count" value="">
+              <input data-input="sum" type="hidden" name="891-256-sum" value="">
             </article>
           </li>
         </ul>
       </div>
-      <fieldset class="page-main__grid-el--contacts order-form__fieldset order-form__fieldset--contacts">
+      <fieldset
+        class="page-main__grid-el page-main__grid-el--contacts order-form__fieldset order-form__fieldset--contacts">
         <legend class="order-form__legend">Контактные данные</legend>
         <div class="form-contacts">
-          <div class="form-contacts__input-wrapper js-active-input">
-            <input class="form-contacts__input" type="text" placeholder="Имя" required>
+          <div class="form-contacts__input-wrapper" data-placeholder="Имя">
+            <input class="form-contacts__input" type="text" placeholder="Имя" pattern="^[a-zA-Z-А-Яа-яЁё\s]+$"
+              name="name" required>
           </div>
-          <div class="form-contacts__input-wrapper">
-            <input class="form-contacts__input" type="text" placeholder="Фамилия" required>
+          <div class="form-contacts__input-wrapper" data-placeholder="Фамилия">
+            <input class="form-contacts__input" type="text" placeholder="Фамилия" pattern="^[a-zA-Z-А-Яа-яЁё\s]+$"
+              name="surname" required>
           </div>
-          <div class="form-contacts__input-wrapper">
-            <input class="form-contacts__input" type="tel" placeholder="Телефон" required>
+          <div class="form-contacts__input-wrapper" data-placeholder="Телефон">
+            <input class="form-contacts__input" type="tel" placeholder="Телефон" pattern="[0-9]{1}[0-9]{10}" name="tel"
+              required>
           </div>
-          <div class="form-contacts__input-wrapper">
-            <input class="form-contacts__input" type="email" placeholder="Email" required>
+          <div class="form-contacts__input-wrapper" data-placeholder="Email">
+            <input class="form-contacts__input" type="email" placeholder="Email"
+              pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})" name="email" required>
           </div>
-          <div class="form-contacts__input-wrapper form-contacts__input-wrapper--address">
-            <textarea class="form-contacts__input form-contacts__textarea"
-              placeholder="г. Санкт-Петербург, пр. Просвещения, д. 99, кв. 152" required></textarea>
+          <div class="form-contacts__input-wrapper form-contacts__input-wrapper--address"
+            data-placeholder="Адрес доставки">
+            <textarea class="form-contacts__input form-contacts__input--textarea" placeholder="Адрес доставки"
+              data-city="0" data-street="0" data-house="0" data-flat="0" data-x="" data-y="" name="address"
+              required></textarea>
+            <button class="form-contacts__sarch-button" type="button">
+              <span class="visually-hidden">Поиск адреса</span>
+            </button>
+            <div class="js-address-options">
+            </div>
           </div>
         </div>
       </fieldset>
-
-      <div class="page-main__grid-el--map order-form__map">Map</div>
-
-      <fieldset class="page-main__grid-el--pay order-form__fieldset order-form__fieldset--payment">
+      <div class="page-main__grid-el page-main__grid-el--map order-form__map" id="map">
+        <span class="visually-hidden">Карта с отображением адреса доставки</span>
+      </div>
+      <fieldset class="page-main__grid-el page-main__grid-el--pay order-form__fieldset order-form__fieldset--payment">
         <legend class="order-form__legend">Оплата</legend>
         <div class="form-radio">
           <div class="form-radio__radio-wrapper">
-            <input class="form-radio__radio" type="radio" name="payment-method" id="payment-cash" checked>
+            <input class="form-radio__radio" type="radio" name="payment-method" value="cash" id="payment-cash" checked>
             <label class="form-radio__radio-label" for="payment-cash">Наличными курьеру</label>
           </div>
           <div class="form-radio__radio-wrapper">
-            <input class="form-radio__radio" type="radio" name="payment-method" id="payment-card">
+            <input class="form-radio__radio" type="radio" name="payment-method" value="card" id="payment-card">
             <label class="form-radio__radio-label" for="payment-card">Картой курьеру</label>
           </div>
           <div class="form-radio__radio-wrapper">
-            <input class="form-radio__radio" type="radio" name="payment-method" id="payment-online">
+            <input class="form-radio__radio" type="radio" name="payment-method" value="online" id="payment-online">
             <label class="form-radio__radio-label" for="payment-online">Картой онлайн</label>
           </div>
         </div>
       </fieldset>
-
-      <fieldset class="page-main__grid-el--comment order-form__fieldset order-form__fieldset--comment">
+      <fieldset
+        class="page-main__grid-el page-main__grid-el--comment order-form__fieldset order-form__fieldset--comment">
         <legend class="order-form__legend">Комментарий к заказу</legend>
         <div class="form-comment">
-          <textarea class="form-comment__input" placeholder="Комментарий к заказу"></textarea>
-          <span class="form-comment__word-counter">Использовано 0/142 символов</span>
+          <textarea class="form-comment__input" name="comment" placeholder="Комментарий к заказу"></textarea>
+          <span class="form-comment__word-counter">Использовано <span class="js-comment-count">0</span>/<span
+              class="js-comment-count-max">142</span> символов</span>
         </div>
       </fieldset>
-
-      <div class="page-main__grid-el--subtotal order-form__subtotal">
+      <div class="page-main__grid-el page-main__grid-el--subtotal order-form__subtotal">
         <dl class="order-form__subtotal-bill form-bill">
           <div class="form-bill__row">
             <dt class="form-bill__position">Товары</dt>
@@ -342,7 +445,8 @@
           </div>
         </dl>
         <div class="order-form__receiving form-receiving">
-          <input class="visually-hidden form-receiving__checkbox" type="checkbox" id="warehouse">
+          <input class="visually-hidden form-receiving__checkbox" type="checkbox" name="fromwarehouse" value="true"
+            id="warehouse">
           <label class="form-receiving__label" for="warehouse">Получить товар со склада</label>
           <span class="form-receiving__annotation">Сроки получения могут измениться</span>
         </div>
@@ -362,27 +466,33 @@
           <a class="privacy-annotation__link" href="#">политикой конфиденциальности.</a>
         </span>
       </div>
+      <input data-input="all-wares-count" type="hidden" name="all-wares-count" value="">
+      <input data-input="all-wares-sum" type="hidden" name="all-wares-sum" value="">
+      <input data-input="promotion" type="hidden" name="promotion" value="">
+      <input data-input="promocode" type="hidden" name="promocode" value="0">
+      <input data-input="all-promotion" type="hidden" name="all-promotion" value="">
+      <input data-input="total-bill" type="hidden" name="total-bill" value="">
     </form>
   </main>
   <footer class="page__footer page-footer">
     <div class="page-footer__container">
-
       <a class="page-footer__anchor-top" href="#">
         <span class="visually-hidden">Вернутся к началу страницы</span>
       </a>
-
       <div class="page-footer__top">
-
         <section class="page-footer__subscribe subscribe">
           <h3 class="subscribe__title">Скидка 10% за подписку
             на наши новости</h3>
           <form class="subscribe__form" action="#">
-            <input class="subscribe__input" type="email" placeholder="example@mail.ru">
+            <input class="subscribe__input" type="email" placeholder="example@mail.ru"
+              pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})">
             <button class="subscribe__submit-button" type="submit">
               <span>Подписаться</span>
             </button>
           </form>
-          <span class="subscribe__privacy-annotation privacy-annotation">Нажимая кнопку “Оформить заказ”, Вы соглашаетесь
+          <span></span>
+          <span class="subscribe__privacy-annotation privacy-annotation">Нажимая кнопку “Оформить заказ”, Вы
+            соглашаетесь
             с
             <a class="privacy-annotation__link" href="#">политикой конфиденциальности.</a>
           </span>
@@ -391,7 +501,6 @@
         <section class="page-footer__navigation footer-navigation">
           <h3 class="visually-hidden">Основные ссылки и разделы сайта</h3>
           <div class="footer-navigation__list-wrapper">
-
             <div class="js-accordion-section">
               <button class="js-accordion-button footer-navigation__accordion-button" type="button" name="button">
                 <span>Интернет-магазин</span>
@@ -411,7 +520,6 @@
                 </li>
               </ul>
             </div>
-
             <div class="js-accordion-section">
               <button class="js-accordion-button footer-navigation__accordion-button" type="button" name="button">
                 <span>Информация</span>
@@ -431,7 +539,6 @@
                 </li>
               </ul>
             </div>
-
             <div class="js-accordion-section">
               <button class="js-accordion-button footer-navigation__accordion-button" type="button" name="button">
                 <span>Социальные сети</span>
@@ -454,7 +561,6 @@
           </div>
         </section>
       </div>
-
       <div class="page-footer__bottom">
         <span><span>&#169;</span> All rights reserved</span>
         <a class="page-footer__policy-link" href="#">Публичная оферта</a>
@@ -466,7 +572,7 @@
     </div>
   </footer>
 
-  <script src="./js/script.js" type="module" defer></script>
+  <script src="./js/script.js" type="module"></script>
 </body>
 
 </html>

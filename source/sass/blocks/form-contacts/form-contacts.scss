@@ -6,25 +6,16 @@
     grid-template-columns: 1fr 1fr;
     gap: 20px;
   }
-
 }
 
-.js-active-input.form-contacts__input-wrapper {
-  &::before {
-    position: absolute;
-    content: "";
-    top: -7px;
-    left: 12px;
-    display: block;
-    padding: 2px 4px;
-    color: $base-grey;
-    font-size: 12px;
-    line-height: 15px;
-    background-color: $base-white;
-  }
+.form-contacts__input-wrapper {
+  height: fit-content;
+  position: relative;
 }
 
 .form-contacts__input-wrapper--address {
+  line-height: 0;
+
   @media (min-width: $tablet-width) {
     grid-column: 1 / -1;
   }
@@ -55,12 +46,110 @@
   }
 }
 
-.form-contacts__textarea {
+.form-contacts__input--textarea {
+  padding-right: 50px;
   resize: none;
-  overflow:hidden;
+  overflow: hidden;
 
   @media (min-width: $tablet-width) {
     padding: 15px 19px;
     height: 3.2em;
+  }
+}
+
+.form-contacts__sarch-button {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  display: none;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  background-image: url("../../../img/icons/stack.svg#search_icon");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20px;
+  border: none;
+}
+
+.js-active-input.form-contacts__input-wrapper {
+  &::before {
+    position: absolute;
+    content: attr(data-placeholder);
+    z-index: 2;
+    top: -10px;
+    left: 12px;
+    display: block;
+    padding: 2px 4px;
+    color: $base-grey;
+    font-size: 12px;
+    line-height: 15px;
+    background-color: $base-white;
+  }
+}
+
+.js-adress-invalid.form-contacts__input-wrapper {
+  &::before {
+    color: $error-color;
+  }
+}
+
+.js-adress-valid.form-contacts__input-wrapper {
+  &::before {
+    color: $success-color;
+  }
+}
+
+.js-active-input .form-contacts__input {
+  color: $base-black;
+  outline: 1px solid $base-grey;
+}
+
+.js-adress-invalid .form-contacts__input {
+  outline: 1px solid $error-color;
+}
+
+.js-adress-valid .form-contacts__input {
+  outline: 1px solid $success-color;
+}
+
+.js-adress-valid .form-contacts__sarch-button {
+  display: block;
+}
+
+.js-adress-invalid .form-contacts__sarch-button {
+  display: none;
+}
+
+.js-address-options {
+  position: absolute;
+  content: "";
+  z-index: 2;
+  top: 71px;
+  width: 100%;
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.1);
+
+  @media (min-width: $tablet-width) {
+    top: 56px;
+  }
+}
+
+.js-address-option {
+  display: flex;
+  align-items: center;
+  padding-left: 16px;
+  width: 100%;
+  height: 51px;
+  background-color: $base-white;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 20px;
+  }
+
+  &:hover {
+    background-color: $base-grey-lightest;
   }
 }

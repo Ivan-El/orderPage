@@ -31,3 +31,12 @@
     margin-left: 20px;
   }
 }
+
+.js-comment-error .form-comment__input {
+  color: $error-color;
+  border-color: $error-color;
+}
+
+.js-comment-error .form-comment__word-counter {
+  color: $error-color;
+}

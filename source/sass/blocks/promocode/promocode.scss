@@ -26,19 +26,15 @@
 
 .promocode__button {
   display: none;
-  font-weight: 700;
-  background-color: transparent;
-  border: none;
-}
-
-.promocode__input:focus + .promocode__button {
   position: absolute;
   content: "";
   top: 0;
   right: 0;
-  display: block;
   padding-right: 20px;
   height: 51px;
+  font-weight: 700;
+  background-color: transparent;
+  border: none;
 }
 
 .promocode__result-message--success,
@@ -56,4 +52,8 @@
 
 .promocode__result-message--error {
   color: $error-color;
+}
+
+.js-active-input .promocode__button {
+  display: block;
 }

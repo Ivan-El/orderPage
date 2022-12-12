@@ -16,10 +16,11 @@
 }
 
 .subscribe__form {
-  display: flex;
+  position: relative;
   margin-bottom: 10px;
   width: 100%;
   height: 40px;
+  line-height: 0;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 12px;
@@ -31,11 +32,12 @@
   display: block;
   padding: 0;
   padding-left: 20px;
-  width: 60%;
+  padding-right: 40%;
+  width: 100%;
+  height: 100%;
   font-size: 16px;
   line-height: 21px;
   border: 1px solid $base-grey-lightest;
-  border-right: none;
   transition: all 0.3s ease-in;
 
   &:hover,
@@ -54,19 +56,23 @@
 }
 
 .subscribe__submit-button {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  display: none;
   width: 40%;
+  height: 100%;
   font-weight: 700;
-  font-size: 16px;
-  line-height: 21px;
+  font-size: 14px;
+  line-height: 18px;
   background-color: transparent;
-  border: 1px solid $base-grey-lightest;
-  border-left: none;
+  border: none;
   transition: all 0.3s ease-in;
 
   &:hover,
   &:focus {
     opacity: 0.6;
-    outline: 1px solid $base-grey;
   }
 
   &:active {
@@ -74,14 +80,23 @@
   }
 
   @media (min-width: $tablet-width) {
-    padding: 6px 10px 0 20px;
-  }
-
-  @media (min-width: $desktop-width) {
-    padding: 6px 0 0 25px;
+    font-size: 16px;
+    line-height: 21px;
   }
 }
 
 .subscribe__privacy-annotation {
   text-align: left;
+}
+
+.js-active-input .subscribe__submit-button {
+  display: block;
+}
+
+.js-subscribe-success {
+  display: block;
+  margin: 5px 0 5px 10px;
+  font-size: 14px;
+  line-height: 18px;
+  color: $success-color;
 }
